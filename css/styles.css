@@ -1,0 +1,277 @@
+/* CSS Document */
+/* Slash-Star begins a comment, and then Star-Slash ends a comment */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: "PT Sans";
+  font-size: 100%; /* Generally set the font-size to 100% in the body - you can then change with em in the other areas */
+  line-height: 1.7em; /* The line-height property in CSS controls the space between lines of text. It is often set in a unitless value (e.g. line-height: 1.4; ) */
+  color: #000000; /* Hex Color Black */
+}
+
+a { 
+  color: #0F4970;
+  text-decoration: none;
+}
+
+a:hover { 
+  color: #0c5829;
+  text-decoration: underline;
+}
+
+/* The container ID will hold our full webpage together */
+#container {
+  width: 100%;
+  margin: 10px auto; /* Sets 10px to the top and the the browser will center with auto */
+  /* border: 1px solid gray; */
+}
+
+/* The top row - spans all columns for header and nav */
+#top_row {
+  margin-bottom: 20px;
+}
+
+#top_row header {
+  margin-bottom: -11em; /* move nav up */
+}
+
+#top_row h1 {
+  color: #0F4970; /* Blue color for header */
+  font-size: 3.75em; /* http://pxtoem.com/ */
+  letter-spacing: -2px; /* The letter-spacing property increases or decreases the space between characters in a text. */
+}
+
+#top_row h3 {
+  font-size: 1.125em;
+  font-weight: 200; /* The font-weight property sets how thick or thin characters in text should be displayed. */
+}
+
+#top_row nav {
+  text-align: center; 
+}
+
+#top_row nav a {
+  text-decoration: none;
+  font-size: 1.125em;
+  font-weight: 400;
+  width: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  color: #580c3b;
+}
+
+#top_row nav a.selected {
+  color: #f1bb99; 
+}
+
+#top_row li {
+  display: inline;
+  border-right: 1px solid #bbb;
+  border-left: 1px solid #bbb;
+}
+
+/* logo formatting */
+#top_row img {
+  float: center;
+  width: 15%;
+  height: auto;
+}
+
+  /* http://www.w3schools.com/cssref/pr_class_display.asp */
+
+  /* Creating a Links display option and roll-over / Pseudo-Element */
+  /* CSS pseudo-elements are used to add special effects to some selectors. */
+  /* More at http://www.w3schools.com/css/css_pseudo_elements.asp */
+  
+  
+  /* Hover adds special style to an element when you mouse over it */
+  
+#top_row nav a.selected:hover {
+  background: #f6f6f6;
+  color: #f1bb99; 
+}
+
+#top_row nav a:hover {  
+  background: #f6f6f6;
+  color: #f1bb99;
+}
+
+#content {
+  width: 100%;
+}
+
+#content h3 {
+  font-size: 1.5em;
+  margin: 30px 0 10px 0;
+  font-weight: normal;
+}
+
+#tabs a {
+  color: #C52222;
+}
+
+#tabs {
+  color: #255555;
+}
+
+#description {
+  color: #255555;
+  text-align: center;
+}
+
+footer {
+  clear: both; /* The clear property specifies which side(s) of an element other floating elements are not allowed. */
+  padding: 0.5em;
+  color: #333333;
+  font-variant: small-caps; 
+  font-size: .813em;
+  text-align: center;
+  border-top: 1px dotted #cccccc;
+  column-count: 4;
+  /* background-color: #ddd; */
+}
+
+/* Table Styling */
+table {
+  width: 75%;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #075F8A;
+  border-spacing: 3px;
+  margin: auto;
+  table-layout: auto;
+  border-collapse: collapse;
+}
+th {
+  height: 40px;
+  font-weight: bold;
+  border-width: 1px;
+}
+th, td {
+  padding: 2px;
+  text-align: center;
+  border-style: solid;
+  border-width: 1px;
+  border-top-width: 2px;
+  color: #333333;
+}
+
+tr {
+  color: #7FFFFF;
+  font-family: "Arial", Helvetica, Arial, Sans-serif;
+}
+
+
+/* Form Styling */
+form {
+  width: 82%;
+  float: right;
+  height: auto;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #f1bb99;
+  border-radius: 1%;
+  padding: 10px;  
+  margin: 2%;
+}
+
+legend {
+  font-weight: bold;
+  text-align: left;
+  color: #58290c;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+label {
+  font-weight: bold;
+  text-align: center;
+}
+
+html { overflow-y: scroll; }
+/* http://www.w3schools.com/cssref/css3_pr_overflow-y.asp */
+
+iframe {
+  display: block;
+  margin: auto;
+}
+
+.columnlefttext {
+  float: right;
+  width: 22%;
+  margin-right: 2%;
+}
+
+.columnmiddle {
+  float: right;
+  width: 20%;
+}
+
+.columnmiddle img {
+  border-radius: 30%;
+  width: 80%;
+  height: auto;
+}
+
+.columnleft {
+  float: right;
+  width: 20%;
+}
+
+.columnleft img {
+  border-radius: 30%;
+  width: 80%;
+  height: auto;
+}
+
+.columnright {
+  float: right;
+  width: 20%;
+}
+
+.columnright img{
+  border-radius: 30%;
+  width: 80%;
+  height: auto;
+}
+
+/* Clear floats after the columns */
+.columnfootone {
+  width: 100%;
+  height: 170px;
+}
+
+.columnfoottwo {
+  width: 100%;
+  height: 170px;
+}
+
+.columnfootthree {
+  width: 100%;
+  height: 170px;
+}
+
+.columnfootfour {
+  width: 100%;
+  height: 170px;
+}
+
+.button {
+  background-color: #580c3b;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 150px;
+}
+
+

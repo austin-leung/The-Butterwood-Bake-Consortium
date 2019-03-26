@@ -1,0 +1,57 @@
+@media screen and (max-width: 480px) {
+   
+    body {
+    font-size: 100%; 
+    background-color: #faf7f3; 
+    }
+
+    #container {
+    width: 100%; 
+    margin: 1em auto;
+  }
+
+  #top_row h1 {
+    color: #2a1d1c; 
+    font-size: 2em; 
+  }
+
+  #top_row h3 {
+    font-size: 1em; 
+  }
+  
+  #top_row nav {
+    display:none; 
+  }
+
+  #content {
+    float: left;
+    width: 100%; 
+    margin: 0;
+    padding: 1em; 
+    border-right: none;
+  }
+
+  #content h3 {
+    font-size: 1.25em; 
+    margin: 0; 
+  }
+
+  #content img {
+    display: none; 
+  }
+
+  .columnleftS {
+    width: 0%;
+    display: none;
+  }
+
+  .columnrightS {
+    width: 0%;
+  }
+
+  .columnmiddleS {
+    width: 100%;
+    float: left;
+  }
+
+}

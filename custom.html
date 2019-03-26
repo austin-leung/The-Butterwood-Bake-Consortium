@@ -1,0 +1,140 @@
+<!DOCTYPE html>   <!-- Tells the browser this is HTML 5 -->
+<html lang="en">  <!-- Root of the html document and is in English -->
+
+<head>
+
+  <!-- META tags help search engines identify your content more easily -->
+  <meta charset="utf-8" /> <!-- Specifies the character encoding for the HTML document -->
+  <meta name="author" content="Austin Leung">
+  <meta name="keywords" content="Carnegie Mellon University, Information Systems, resume">
+  <meta name="description" content="Austin Leung Professional Website">
+
+  <!-- The title will appear in the menu bar of the browser -->
+  
+  <link rel="stylesheet" media="all" type="text/css" href="css/styles.css" />
+  <link rel="stylesheet" media="all" type="text/css" href="css/jquery-ui.css" />
+  <link rel="stylesheet" media="screen and (max-width: 480px)" href="css/stylesmobile.css" />
+  
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"> </script>
+  <script type="text/javascript" src="js/scripts.js" > </script>
+  <script type="text/javascript" src="js/jquery-ui.js" > </script>
+
+  <style>
+  .middle {
+    width: 50%;
+  }
+  </style>
+  
+</head>
+
+<body>
+
+  <div id="container">
+
+    <div id="top_row">
+  
+      <header> <!-- Header is new tag in HTML 5 -->
+        <img src="images/logo.png" alt="Butterwood Logo">
+      </header>
+
+      <br>
+      
+      <nav> <!-- Nav is new tag in HTML 5 -->
+          <li><a href="index.html">Home</a> </li> <!-- Navigation to other pages in our website - these are relative links --> 
+          <li><a href="special.html">Special Occasions</a> </li>
+          <li><a class="selected" href="custom.html">Custom Orders</a> </li>
+          <li><a href="contact.html">Visit or Contact Us</a> </li>
+          <!-- This anchor takes us to another page within the site; hence it is called a relative link. -->  
+      </nav>
+
+    </div> <!-- close top_row-->
+
+    <div id="content">
+      <form onsubmit="return validatePickup()">
+      
+        <fieldset>
+          <legend>Whole Pie Order Form</legend>
+          <label for="uname">First and Last Name:</label><br>
+          <input type="text" id="uname" name="uname" value="" size="20" maxlength ="250" required><br><br>
+          <label for="txtBillingAddress">Billing Address:</label><br>
+          <input type="billingAddress" id="txtBillingAddress" name="txtBillingAddress" value="" size="20" maxlength="250" required><br><br>
+          <label for="email">Email Address:</label><br>
+          <input type="email" id="email" name="email" value="" Placeholder="you@gmail.com" required><br><br>
+          <label for="phone">Phone Number:</label> (no dashes or space, 10 digits) <br>
+          <input type="text" id="phone" required><br><br>
+          <label for="pieQuantity">Pie Quantity:</label><br>
+          <select name="pieQuantity">
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <br>
+          </select><br><br>
+          <label for="pieType">Pie Type:</label><br>
+          <select name="pieType">
+            <option value="Apple" selected>Apple</option>
+            <option value="Banana Cream">Banana Cream</option>
+            <option value="Butternut Squash">Butternut Squash</option>
+            <option value="Butterscotch">Butterscotch</option>
+            <option value="Chocolate Cream">Chocolate Cream</option>
+            <option value="Coconut Cream">Coconut Cream</option>
+            <option value="Mango">Mango</option>
+            <option value="Pecan">Pecan</option>
+            <option value="Pumpkin">Pumpkin</option>
+            <option value="Sweet Potato">Sweet Potato</option>
+            <option value="Vanilla Custard">Vanilla Custard</option>
+            <br>
+          </select><br><br>
+          <label for="txtDate">Pickup Date and Time:</label> <br>
+          <input type="datetime-local" id="txtDate" name="txtDate" value="" size="20" maxlength ="250" required><br/><br/>
+          <label fr="specialInstructions">Special Instructions:</label> <br/>
+          <textarea id="specialInstructions" name="specialInstructions" value="" rows="10" cols="50" maxlength="1000"> </textarea><br/><br/>
+        </fieldset>
+        
+        <fieldset>
+            <input type ="image" src="images/submit.png" alt="Submit" name= "btnimage" value ="Submit">
+        </fieldset>
+      
+      </form>
+    </div> <!-- close content-->
+
+    <footer>
+
+      <div class="row1">
+
+      <div class="columnfootone">
+        <h3>Contact</h3> 
+        Phone: 412-781-0218 <br>
+        <p>Email: <a href="mailto:info@thebutterwood.com">info@thebutterwood.com</a></p>
+      </div>
+
+      <div class="columnfoottwo">
+        <h3>Follow Us!</h3> 
+        <a href="https://www.facebook.com/thebutterwoodbakeconsortium?ref=hl" target="_blank"><img src="images/facebook.webp"></a>
+        <a href="https://www.instagram.com/thebutterwoodbakeconsortium/" target="_blank"><img src="images/instagram.webp"></a>
+      </div>
+
+      <div class="columnfootthree">
+        <h3>Address</h3> 
+        <a href="https://www.google.com/maps/place/5222+Butler+St,+Pittsburgh,+PA+15201/data=!4m2!3m1!1s0x8834f2f8094aa81b:0x8460b792bcc058aa?sa=X&ved=2ahUKEwjxoOa5ipzhAhWthOAKHckzC4cQ8gEwAHoECAoQAQ" target="_blank">5222 Butler St Pittsburgh, PA 15201</a>
+      </div>
+
+      <div class="columnfootfour">
+        <h3>Hours</h3> 
+        Wed–Fri 12PM - 11PM <br> Sat 10AM - 11PM <br> Sun 10AM - 9PM
+      </div> <!-- close column -->
+
+      </div> <!-- close row -->
+
+    </footer>
+
+  </div>   <!-- close container-->
+</body>
+
+</html>

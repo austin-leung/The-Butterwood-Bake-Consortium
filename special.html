@@ -1,0 +1,277 @@
+<!DOCTYPE html>   <!-- Tells the browser this is HTML 5 -->
+<html lang="en">  <!-- Root of the html document and is in English -->
+
+<head>
+
+  <!-- META tags help search engines identify your content more easily -->
+  <meta charset="utf-8" /> <!-- Specifies the character encoding for the HTML document -->
+  <meta name="author" content="Austin Leung">
+  <meta name="keywords" content="Carnegie Mellon University, Information Systems, resume">
+  <meta name="description" content="Austin Leung Professional Website">
+
+  <!-- The title will appear in the menu bar of the browser -->
+  
+  <link rel="stylesheet" media="all" type="text/css" href="css/styles.css" />
+  <link rel="stylesheet" media="all" type="text/css" href="css/jquery-ui.css" />
+  <link rel="stylesheet" media="all" type="text/css" href="css/jquery.lightbox.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"> </script>
+  <script type="text/javascript" src="js/scripts.js" > </script>
+  <script type="text/javascript" src="js/jquery-ui.js" > </script>
+  <script type="text/javascript" src="js/jquery.lightbox.min.js" > </script>
+
+  <script>
+    $(function() {
+      $( "#tabs" ).tabs({
+        event:"mouseover"
+      });
+    });
+    $(function() {
+      $( ".accordion" ).accordion();
+    });
+  </script>
+
+  <script>
+    function openCity(evt, cityName) {
+      var i, x, tablinks;
+      x = document.getElementsByClassName("city");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" w3-border-green", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.firstElementChild.className += " w3-border-green";
+    }
+  </script>
+
+  <style>
+
+
+  .columnvideo {
+    width: 46%;
+    float: left;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .accordion {
+    width: 46%;
+    height: 100%;
+    float: left;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  #tabs-wedding {
+    margin-bottom: 330px;
+  }
+
+  #tabs-celebrations {
+    margin-bottom: 330px;
+  }
+
+  #tabs-holidays {
+    margin-bottom: 330px;
+  }
+
+  #tabs {
+    margin-bottom: 2%;
+  }
+
+  .columnmiddleS {
+    width: 82%;
+    float: right;
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-family: "PT Sans";
+    color: #580c3b;
+  }
+
+  h3 {
+    font-family: "PT Sans";
+  }
+
+  </style>
+  
+</head>
+
+<body>
+
+  <div id="container">
+
+    <div id="top_row">
+  
+      <header> <!-- Header is new tag in HTML 5 -->
+        <img src="images/logo.png" alt="Butterwood Logo">
+      </header>
+
+      <br>
+      
+      <nav> <!-- Nav is new tag in HTML 5 -->
+          <li><a href="index.html">Home</a> </li> <!-- Navigation to other pages in our website - these are relative links --> 
+          <li><a class="selected" href="special.html">Special Occasions</a> </li>
+          <li><a href="custom.html">Custom Orders</a> </li>
+          <li><a href="contact.html">Visit or Contact Us</a> </li>
+          <!-- This anchor takes us to another page within the site; hence it is called a relative link. -->  
+      </nav>
+
+    </div> <!-- close top_row-->
+
+    <div id="content">
+
+      <div class="columnleftS">
+      </div> <!-- close column left-->
+
+      <div class="columnmiddleS">
+        <div class="w3-container">
+          <h2>Special Occasions</h2>
+
+          <div class="w3-row">
+            <a href="javascript:void(0)" onclick="openCity(event, 'Weddings');">
+              <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Weddings</div>
+            </a>
+            <a href="javascript:void(0)" onclick="openCity(event, 'Celebrations');">
+              <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Celebrations</div>
+            </a>
+            <a href="javascript:void(0)" onclick="openCity(event, 'Holidays');">
+              <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Holidays</div>
+            </a>
+          </div>
+
+          <div id="Weddings" class="w3-container city">
+
+            <h2>Weddings</h2>
+            <p> Weddings are such a joyous occasion and each one is different! The same is true of our wedding cakes. We have an almost unlimited combination of flavors and styles to choose from. </p>
+            <h3>Batters and fillings: </h3>
+            <p>Our most popular batter is yellow, but we also offer red velvet, chocolate, marble, and others upon request. As for fillings, we recommend white buttercream icing, chocolate fudge icing, strawberry crème filling, vanilla pastry cream, or one of several fruit fillings (lemon, raspberry, apricot, strawberry, etc.). That being said, if you have something special in mind it can’t hurt to ask!</p>
+            <h3>Sizes:</h3>
+            <p>To keep proportionality and maintain structure, wedding cakes come in certain sizes with certain tier dimensions. If the size of the wedding party falls in between cake sizes, we can offer additional sheet cakes up to the amount of slices required.</p>
+            <h3>Pricing:</h3>
+            <p>Our wedding cakes vary in price, depending on type, size, and “extras” such as special fillings, pillars, etc. For example, the cakes seen above are in the $3.25 – $3.75 per serving range.</p>
+            <h3>Other delicacies:</h3>
+            <p>Our wedding cakes are really just the beginning. Lots of folks opt for Individual desserts (3” mini-cakes, cupcakes, etc.) and of course there’s always room in the celebration for Cookie Trays, Monogrammed Petit Fours, Junior Pastry Trays, Grooms’ Cakes, Shower Cakes, Monogrammed Cookies, Wedding Challah, Breakfast Trays, etc.</p>
+            <h3>Delivery:</h3>
+            <p>We co-ordinate with the reception venue, florist, etc. for the timing of the delivery of the cake. Delivery fees vary by location. Smaller cakes can be packed by us to facilitate pick-up at the bakery.</p><br><br>
+
+            <div class="columnvideo">
+              <iframe width=100% height=315 src="https://www.youtube.com/embed/fj5gEVWbrN4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div> <!--close columnvideo-->
+
+            <div class="accordion">
+              <h4>Steph and Steve's Wedding</h4>
+              <div> <p>Steves enjoyed his wedding!</p> 
+                <p>Steph did too!</p>
+                <p>Steve loves Steph and he's so happy they're finally married!</p></div>
+              <h4>Sophia and Leo's Wedding</h4>
+              <div> <p>Sophia and Leo ordered a five-tiered Toronto themed cheesecake.</p> 
+                <p>Sophia: "It tasted like heaven..."</p>
+                <p>Leo: "It was so fluffy!!!"</p></div>
+              <h4>Tim and Sonal's Wedding</h4>
+              <div> <p>Tim: "We got a Paul Pogba cupcake and I loved it."</p> </div>
+            </div> <!-- end accordion-->
+
+          </div>
+
+          <div id="Celebrations" class="w3-container city" style="display:none">
+
+            <h2> Celebrations </h2> 
+            <p>Birthdays, anniversaries, showers, graduations, religious celebrations etc. We have baked special treats for each of life’s special events and can customize them to showcase your theme or ideas. View our photo gallery on Facebook, and if you would like to inquire about a custom cake not available on our website, please email us at <a href="mailto:info@prantlsbakery.com">info@prantlsbakery.com</a>.</p>
+            <h3>Sizes:</h3>
+            <p>We offer custom cake rounds sizes from 8”-12”. Sheet cakes can be ordered from the sizes of 1/4, 1/2, 3/4 and full.</p>
+            <h3>Pricing:</h3>
+            <p>Our cakes vary in price, depending on type, size, and “extras” such as decorations and personalizations.</p>
+            <h3>Delivery:</h3>
+            <p>Delivery fees vary by location. Smaller cakes can be packed by us to facilitate pick-up at the bakery.</p><br>
+
+            <div class="columnvideo">
+              <iframe width=100% height="315" src="https://www.youtube.com/embed/DH5PI4QBcnE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div> <!--close columnvideo-->
+
+            <div class="accordion">
+              <h4>Steve and Steph's Wedding</h4>
+              <div> <p>Steve enjoyed his wedding!</p> 
+                <p>Steph did too!</p></div>
+              <h4>Sophia and Leo's Wedding</h4>
+              <div> <p>Sophia and Leo ordered a five-tiered Toronto themed cheesecake.</p> 
+                <p>Sophia: "It tasted like heaven..."</p>
+                <p>Leo: "It was so fluffy!!!"</p></div>
+              <h4>Tim and Sonal's Wedding</h4>
+              <div> <p>Tim: "We got a Paul Pogba cupcake and I loved it."</p> </div>
+            </div> <!-- end accordion-->
+
+          </div>
+
+          <div id="Holidays" class="w3-container city" style="display:none">
+
+            <h2>Holidays</h2>
+            <p>From Valentine’s Day, Christmas, Thanksgiving, and Mardi Gras, we have cakes for your favorite occasions! </p><br>
+            <p>Easter is right around the corner. Check out our baked goods that are perfect for your fun, colorful weekend, ranging from Easter themed cookies, cakes, cupcakes, and more.</p><br>
+
+            <div class="columnvideo">
+              <iframe width=100% height=315 src="https://www.youtube.com/embed/sCbQ9flSRaQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div> <!--close columnvideo-->
+
+            <div class="accordion">
+              <h4>Steve and Steph's Wedding</h4>
+              <div> <p>Steve enjoyed his wedding!</p> 
+                <p>Steph did too!</p></div>
+              <h4>Sophia and Leo's Wedding</h4>
+              <div> <p>Sophia and Leo ordered a five-tiered Toronto themed cheesecake.</p> 
+                <p>Sophia: "It tasted like heaven..."</p>
+                <p>Leo: "It was so fluffy!!!"</p></div>
+              <h4>Tim and Sonal's Wedding</h4>
+              <div> <p>Tim: "We got a Paul Pogba cupcake and I loved it."</p> </div>
+            </div> <!-- end accordion-->
+
+          </div><!-- end Holidays-->
+        </div> <!-- close w3-container-->
+      
+      </div> <!-- close column middle-->
+
+      <div class="columnrightS">
+      </div> <!-- close column right-->
+
+     
+    </div> <!-- close content-->
+
+    <footer>
+
+      <div class="row1">
+
+      <div class="columnfootone">
+        <h3>Contact</h3> 
+        Phone: 412-781-0218 <br>
+        <p>Email: <a href="mailto:info@thebutterwood.com">info@thebutterwood.com</a></p>
+      </div>
+
+      <div class="columnfoottwo">
+        <h3>Follow Us!</h3> 
+        <a href="https://www.facebook.com/thebutterwoodbakeconsortium?ref=hl" target="_blank"><img src="images/facebook.webp"></a>
+        <a href="https://www.instagram.com/thebutterwoodbakeconsortium/" target="_blank"><img src="images/instagram.webp"></a>
+      </div>
+
+      <div class="columnfootthree">
+        <h3>Address</h3> 
+        <a href="https://www.google.com/maps/place/5222+Butler+St,+Pittsburgh,+PA+15201/data=!4m2!3m1!1s0x8834f2f8094aa81b:0x8460b792bcc058aa?sa=X&ved=2ahUKEwjxoOa5ipzhAhWthOAKHckzC4cQ8gEwAHoECAoQAQ" target="_blank">5222 Butler St Pittsburgh, PA 15201</a>
+      </div>
+
+      <div class="columnfootfour">
+        <h3>Hours</h3> 
+        Wed–Fri 12PM - 11PM <br> Sat 10AM - 11PM <br> Sun 10AM - 9PM
+      </div> <!-- close column -->
+
+      </div> <!-- close row -->
+
+    </footer>
+
+  </div>   <!-- close container-->
+</body>
+
+</html>

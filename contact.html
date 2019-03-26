@@ -1,0 +1,289 @@
+<!DOCTYPE html>   <!-- Tells the browser this is HTML 5 -->
+<html lang="en">  <!-- Root of the html document and is in English -->
+
+<head>
+
+  <!-- META tags help search engines identify your content more easily -->
+  <meta charset="utf-8" /> <!-- Specifies the character encoding for the HTML document -->
+  <meta name="author" content="Austin Leung">
+  <meta name="keywords" content="Carnegie Mellon University, Information Systems, resume">
+  <meta name="description" content="Austin Leung Professional Website">
+
+  <!-- The title will appear in the menu bar of the browser -->
+  
+  <link rel="stylesheet" media="all" type="text/css" href="css/styles.css" />
+  <link rel="stylesheet" media="all" type="text/css" href="css/jquery-ui.css" />
+  <link rel="stylesheet" media="screen and (max-width: 480px)" href="css/stylesmobile.css" />
+  
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"> </script>
+  <script type="text/javascript" src="js/scripts.js" > </script>
+  <script type="text/javascript" src="js/jquery-ui.js" > </script>
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+  <script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+  <script type="text/javascript">
+    $(function() {
+      $('#container-graph1').highcharts({
+            title: {
+              text: 'Busy Hours Wednesday-Friday',
+            },
+
+            xAxis: {
+              title: {
+                text: 'Hour'
+              },
+              categories: ['12pm', '1pm', '2pm', '3pm', '4pm', '5pm',
+                '6pm', '7pm', '8pm', '9pm', '10pm', '11pm']
+            },
+
+            yAxis: {
+              title: {
+                text: 'People on Average'
+              },
+            },
+
+            tooltip: {
+              valueSuffix: ' people on average'
+            },
+
+
+            series: [{
+              showInLegend: false,
+              data: [10, 8, 24, 5, 7, 32, 16, 18, 27, 39, 32, 22]
+            }],
+        });
+    });
+  </script>
+
+  <script type="text/javascript">
+    $(function() {
+      $('#container-graph2').highcharts({
+            title: {
+              text: 'Busy Hours Saturday-Sunday',
+            },
+
+            xAxis: {
+              title: {
+                text: 'Hour'
+              },
+              categories: ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm',
+                '6pm', '7pm', '8pm', '9pm']
+            },
+
+            yAxis: {
+              title: {
+                text: 'People on Average'
+              },
+            },
+
+            tooltip: {
+              valueSuffix: ' people on average'
+            },
+
+            series: [{
+              showInLegend: false,
+              data: [30, 33, 50, 48, 25, 28, 27, 24, 46, 66, 73, 70]
+            }],
+        });
+    });
+  </script>
+
+  <style>
+    .storeinfo {
+      height: auto;
+      border: 3px solid #f1bb99;
+      border-radius: 1%;
+      width: 82%;
+      padding: 10px;
+      margin: 2%;
+      float: right;
+    }
+
+    .visitinghours {
+      margin-top: 2%;
+      margin-bottom: 2%;
+    }
+
+    .storeinfoleft {
+      margin-top: 2%;
+      width: 31%;
+      float: left;
+      margin-left: 2%;
+    }
+
+    .storeinfoleft p { 
+      font-family: "lato", sans-serif;
+    }
+
+    .storeinfotable img {
+      width: 100%;
+      height: auto;
+    }
+
+    .storeinfocenter {
+      width: 45%;
+      float: left;
+      margin-left: 1%;
+      margin-right: 1%;
+    }
+
+    .storeinfocenter img {
+      width: 100%;
+      float: left;
+      height: auto;
+    }
+
+    .storeinforight {
+      width: 45%;
+      float: left;
+      margin-right: 2%;
+    }
+
+    #container-graph1 {
+      width: 47%;
+      float:left;
+      height:auto;
+    }
+
+    #container-graph2 {
+      width: 47%;
+      height: auto;
+      float:left;
+    }
+
+    input {
+      height: 15px;
+    }
+
+    table {
+      border-color: #580c3b;
+    }
+
+  </style>
+  
+</head>
+
+<body>
+
+  <div id="container">
+
+    <div id="top_row">
+  
+      <header> <!-- Header is new tag in HTML 5 -->
+        <img src="images/logo.png" alt="Butterwood Logo">
+      </header>
+
+      <br>
+      
+      <nav> <!-- Nav is new tag in HTML 5 -->
+          <li><a href="index.html">Home</a> </li> <!-- Navigation to other pages in our website - these are relative links --> 
+          <li><a href="special.html">Special Occasions</a> </li>
+          <li><a href="custom.html">Custom Orders</a> </li>
+          <li><a class="selected" href="contact.html">Visit or Contact Us</a> </li>
+          <!-- This anchor takes us to another page within the site; hence it is called a relative link. -->  
+      </nav>
+
+    </div> <!-- close top_row-->
+
+    <div id="content">
+
+      <div class="storeinfo">
+
+        <div class="storeinfocenter">
+          <div class="storeinfotable">
+            <table style="width:300px" border="4">
+              <th colspan=2>Store Information <br> <img src="images/store.jpg" alt="store"></th>
+                <tr>
+                  <td>Address</td>
+                  <td>Lawrenceville 5222 Butler St Pittsburgh, PA 15201</td> 
+                </tr>
+                <tr>
+                  <td>Phone</td>
+                  <td>412-781-0218</td> 
+                </tr>
+                <tr>
+                  <td>Email</td>
+                  <td>info@thebutterwood.com</td> 
+                </tr>
+                <tr>
+                  <td>Hours</td>
+                  <td>Wed–Fri 12PM - 11PM <br> Sat 10AM - 11PM <br> Sun 10AM - 9PM</td> 
+                </tr>
+            </table>
+          </div> <!-- close storeinfotable -->
+
+        </div> <!-- close storeinfocenter -->
+
+        <div class="storeinforight">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3034.74491333852!2d-79.95592604909345!3d40.48090797925633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f2f80929711b%3A0x169402af50d86e6c!2sThe+Butterwood+Bake+Consortium!5e0!3m2!1sen!2sus!4v1553563306877" width=100% height=auto frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+
+      <br>
+
+        <div class="visitinghours">
+
+          <div id="container-graph1"></div>
+          <div id="container-graph2"></div>
+
+        </div> <!-- close visitinghours -->
+
+      </div> <!-- close storeinfo -->
+
+      <br>
+
+      <form onsubmit="return validate()">
+        <fieldset>
+          <legend>Contact Us!</legend>
+          <label for="uname">Name:</label>*<br>
+          <input type="text" id="uname" name="uname" value="" size="20" maxlength ="250" required><br><br>
+          <label for="txtZipcode">Zip Code:</label> <br>
+          <input type="zipcode" id="txtZipcode" name="txtZipcode" value="" size="20" maxlength="5"><br><br>
+          <label for="email">Email Address:</label>*<br>
+          <input type="email" id="email" name="email" value="" Placeholder="you@gmail.com" required><br><br>
+          <input type="checkbox" id="signup" name="signup" value="yes">Yes, I would like to subscribe to Butterwood Bake Consortium's mailing list!<br>
+          <label fr="message">Message:</label>* <br/>
+          <textarea id="message" name="message" value="Type your Message" rows="10" cols="50" maxlength="1000"> </textarea><br/><br/>
+        </fieldset>
+        
+        <fieldset>
+            <input type ="image" src="images/submit.png" alt="Submit" name= "btnimage" value ="Submit">
+        </fieldset>
+      
+      </form>
+      
+    </div> <!-- close content-->
+
+    <footer>
+
+      <div class="row1">
+
+      <div class="columnfootone">
+        <h3>Contact</h3> 
+        Phone: 412-781-0218 <br>
+        <p>Email: <a href="mailto:info@thebutterwood.com">info@thebutterwood.com</a></p>
+      </div>
+
+      <div class="columnfoottwo">
+        <h3>Follow Us!</h3> 
+        <a href="https://www.facebook.com/thebutterwoodbakeconsortium?ref=hl" target="_blank"><img src="images/facebook.webp"></a>
+        <a href="https://www.instagram.com/thebutterwoodbakeconsortium/" target="_blank"><img src="images/instagram.webp"></a>
+      </div>
+
+      <div class="columnfootthree">
+        <h3>Address</h3> 
+        <a href="https://www.google.com/maps/place/5222+Butler+St,+Pittsburgh,+PA+15201/data=!4m2!3m1!1s0x8834f2f8094aa81b:0x8460b792bcc058aa?sa=X&ved=2ahUKEwjxoOa5ipzhAhWthOAKHckzC4cQ8gEwAHoECAoQAQ" target="_blank">5222 Butler St Pittsburgh, PA 15201</a>
+      </div>
+
+      <div class="columnfootfour">
+        <h3>Hours</h3> 
+        Wed–Fri 12PM - 11PM <br> Sat 10AM - 11PM <br> Sun 10AM - 9PM
+      </div> <!-- close column -->
+
+      </div> <!-- close row -->
+
+    </footer>
+
+  </div>   <!-- close container-->
+</body>
+
+</html>
