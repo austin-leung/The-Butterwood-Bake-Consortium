@@ -95,68 +95,107 @@
       border-radius: 1%;
       width: 82%;
       padding: 10px;
-      margin: 2%;
+      margin-right: 3%;
       float: right;
-    }
-
-    .visitinghours {
-      margin-top: 2%;
       margin-bottom: 2%;
     }
 
-    .storeinfoleft {
-      margin-top: 2%;
-      width: 31%;
-      float: left;
-      margin-left: 2%;
+    .storeinfoRow1 {
+      height: 100%;
     }
 
-    .storeinfoleft p { 
-      font-family: "lato", sans-serif;
+    .storeinfoRow2 {
+      height: 45%;
+      width: auto;
+    }
+
+    .storeinfotable {
+      width: 45%;
+      height: auto;
+      float: left;
+      margin-left: 3%;
+      margin-right: 4%;
+    }
+
+    .storeinfotable table {
+      width: 100%;
     }
 
     .storeinfotable img {
-      width: 100%;
+      width: 190px;
       height: auto;
-    }
-
-    .storeinfocenter {
-      width: 45%;
-      float: left;
-      margin-left: 1%;
-      margin-right: 1%;
-    }
-
-    .storeinfocenter img {
-      width: 100%;
-      float: left;
-      height: auto;
-    }
-
-    .storeinforight {
-      width: 45%;
-      float: left;
-      margin-right: 2%;
     }
 
     #container-graph1 {
-      width: 47%;
-      float:left;
-      height:auto;
+      width: 45%;
+      float: left;
+      margin-left: 3%;
+      margin-right: 4%;
     }
 
     #container-graph2 {
-      width: 47%;
-      height: auto;
-      float:left;
+      width: 45%;
+      float: left;
+      margin-right: 3%;
     }
 
-    input {
-      height: 15px;
+    .storeinforight{
+      width: 45%;
+      height: 100%;
+      float: left;
+      margin-right: 3%;
+    }
+
+    iframe {
+      width: 100%;
+      height: 400px;
+    }
+
+    input[type=text], input[type=zipcode], input[type=email] {
+      width: 100%;
+      padding: 4px 5px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 1px solid #58290c;
+      border-radius: 4px;
+      background-color: #eaf0ff;
+      color: #58290c;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 4px 5px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 1px solid #58290c;
+      border-radius: 4px;
+      background-color: #eaf0ff;
+      color: #58290c;
+    }
+
+    input[type=submit] {
+      background-color: #580c3b;
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-decoration: none;
+      margin: 4px 2px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 20px;
     }
 
     table {
       border-color: #580c3b;
+    }
+
+    h2 {
+      font-family: "PT Sans";
+      color: #580c3b;
+    }
+
+    h3 {
+      font-family: "PT Sans";
     }
 
   </style>
@@ -172,8 +211,6 @@
       <header> <!-- Header is new tag in HTML 5 -->
         <img src="images/logo.png" alt="Butterwood Logo">
       </header>
-
-      <br>
       
       <nav> <!-- Nav is new tag in HTML 5 -->
           <li><a href="index.html">Home</a> </li> <!-- Navigation to other pages in our website - these are relative links --> 
@@ -189,10 +226,13 @@
 
       <div class="storeinfo">
 
-        <div class="storeinfocenter">
+        <h2>Store Information</h2><br>
+
+        <div class="storeinfoRow1">
+
           <div class="storeinfotable">
-            <table style="width:300px" border="4">
-              <th colspan=2>Store Information <br> <img src="images/store.jpg" alt="store"></th>
+            <table border="4">
+              <th colspan=2><img src="images/store.jpg" alt="store"></th>
                 <tr>
                   <td>Address</td>
                   <td>Lawrenceville 5222 Butler St Pittsburgh, PA 15201</td> 
@@ -212,42 +252,34 @@
             </table>
           </div> <!-- close storeinfotable -->
 
-        </div> <!-- close storeinfocenter -->
+          <div class="storeinforight">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3034.74491333852!2d-79.95592604909345!3d40.48090797925633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f2f80929711b%3A0x169402af50d86e6c!2sThe+Butterwood+Bake+Consortium!5e0!3m2!1sen!2sus!4v1553563306877" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div> <!--close storeinforight-->
 
-        <div class="storeinforight">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3034.74491333852!2d-79.95592604909345!3d40.48090797925633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f2f80929711b%3A0x169402af50d86e6c!2sThe+Butterwood+Bake+Consortium!5e0!3m2!1sen!2sus!4v1553563306877" width=100% height=auto frameborder="0" style="border:0" allowfullscreen></iframe>
-        </div>
+        </div><!--close storeinfoRow1-->
 
-      <br>
-
-        <div class="visitinghours">
+        <div class="storeinfoRow2">
 
           <div id="container-graph1"></div>
           <div id="container-graph2"></div>
 
-        </div> <!-- close visitinghours -->
+        </div> <!-- close storeinfoRow2 -->
 
       </div> <!-- close storeinfo -->
 
-      <br>
-
       <form onsubmit="return validate()">
-        <fieldset>
-          <legend>Contact Us!</legend>
-          <label for="uname">Name:</label>*<br>
-          <input type="text" id="uname" name="uname" value="" size="20" maxlength ="250" required><br><br>
-          <label for="txtZipcode">Zip Code:</label> <br>
-          <input type="zipcode" id="txtZipcode" name="txtZipcode" value="" size="20" maxlength="5"><br><br>
-          <label for="email">Email Address:</label>*<br>
-          <input type="email" id="email" name="email" value="" Placeholder="you@gmail.com" required><br><br>
-          <input type="checkbox" id="signup" name="signup" value="yes">Yes, I would like to subscribe to Butterwood Bake Consortium's mailing list!<br>
-          <label fr="message">Message:</label>* <br/>
-          <textarea id="message" name="message" value="Type your Message" rows="10" cols="50" maxlength="1000"> </textarea><br/><br/>
-        </fieldset>
-        
-        <fieldset>
-            <input type ="image" src="images/submit.png" alt="Submit" name= "btnimage" value ="Submit">
-        </fieldset>
+        <h2>Contact Us!</h2><br>
+        <label for="uname">Name:</label>*<br>
+        <input type="text" id="uname" name="uname" value="" size="20" maxlength ="250" Placeholder="John Doe"required><br>
+        <label for="txtZipcode">Zip Code:</label><br>
+        <input type="zipcode" id="txtZipcode" name="txtZipcode" value="" size="20" maxlength="5" Placeholder="67250"><br>
+        <label for="email">Email Address:</label>*<br>
+        <input type="email" id="email" name="email" value="" Placeholder="cake@gmail.com" required><br>
+        <input type="checkbox" id="signup" name="signup" value="yes"> Yes, I would like to subscribe to Butterwood Bake Consortium's mailing list!<br>
+        <label fr="message">Message:</label>* <br/>
+        <textarea required id="message" name="message" value="Type your Message" rows="10" cols="50" maxlength="1000"></textarea><br/>
+
+        <input type="submit" name= "btnimage" value ="Submit">
       
       </form>
       

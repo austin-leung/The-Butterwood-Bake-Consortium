@@ -14,22 +14,11 @@
   <link rel="stylesheet" media="all" type="text/css" href="css/styles.css" />
   <link rel="stylesheet" media="all" type="text/css" href="css/jquery-ui.css" />
   <link rel="stylesheet" media="all" type="text/css" href="css/jquery.lightbox.css" />
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" media="all" type="text/css" href="css/tabs.css">
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"> </script>
   <script type="text/javascript" src="js/scripts.js" > </script>
   <script type="text/javascript" src="js/jquery-ui.js" > </script>
   <script type="text/javascript" src="js/jquery.lightbox.min.js" > </script>
-
-  <script>
-    $(function() {
-      $( "#tabs" ).tabs({
-        event:"mouseover"
-      });
-    });
-    $(function() {
-      $( ".accordion" ).accordion();
-    });
-  </script>
 
   <script>
     function openCity(evt, cityName) {
@@ -45,6 +34,15 @@
       document.getElementById(cityName).style.display = "block";
       evt.currentTarget.firstElementChild.className += " w3-border-green";
     }
+
+    function myFunction(id) {
+      var x = document.getElementById(id);
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else { 
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
   </script>
 
   <style>
@@ -57,28 +55,12 @@
     margin-right: 2%;
   }
 
-  .accordion {
+  .accordionWedding, .accordionCelebrations, .accordionHolidays{
     width: 46%;
     height: 100%;
     float: left;
     margin-left: 2%;
     margin-right: 2%;
-  }
-
-  #tabs-wedding {
-    margin-bottom: 330px;
-  }
-
-  #tabs-celebrations {
-    margin-bottom: 330px;
-  }
-
-  #tabs-holidays {
-    margin-bottom: 330px;
-  }
-
-  #tabs {
-    margin-bottom: 2%;
   }
 
   .columnmiddleS {
@@ -89,13 +71,18 @@
     margin-bottom: 20px;
   }
 
-  h2 {
+  h2, h4 {
     font-family: "PT Sans";
     color: #580c3b;
   }
 
-  h3 {
+  #content h3 {
     font-family: "PT Sans";
+  }
+
+  #accord1, #accord2, #accord3, #accord4, 
+  #accord5, #accord6, #accord7, #accord8, #accord9 {
+    padding: 10px;
   }
 
   </style>
@@ -111,12 +98,10 @@
       <header> <!-- Header is new tag in HTML 5 -->
         <img src="images/logo.png" alt="Butterwood Logo">
       </header>
-
-      <br>
       
       <nav> <!-- Nav is new tag in HTML 5 -->
-          <li><a href="index.html">Home</a> </li> <!-- Navigation to other pages in our website - these are relative links --> 
-          <li><a class="selected" href="special.html">Special Occasions</a> </li>
+          <li><a class="selected" href="index.html">Home</a> </li> <!-- Navigation to other pages in our website - these are relative links --> 
+          <li><a href="special.html">Special Occasions</a> </li>
           <li><a href="custom.html">Custom Orders</a> </li>
           <li><a href="contact.html">Visit or Contact Us</a> </li>
           <!-- This anchor takes us to another page within the site; hence it is called a relative link. -->  
@@ -164,20 +149,30 @@
               <iframe width=100% height=315 src="https://www.youtube.com/embed/fj5gEVWbrN4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div> <!--close columnvideo-->
 
-            <div class="accordion">
-              <h4>Steph and Steve's Wedding</h4>
-              <div> <p>Steves enjoyed his wedding!</p> 
-                <p>Steph did too!</p>
-                <p>Steve loves Steph and he's so happy they're finally married!</p></div>
-              <h4>Sophia and Leo's Wedding</h4>
-              <div> <p>Sophia and Leo ordered a five-tiered Toronto themed cheesecake.</p> 
-                <p>Sophia: "It tasted like heaven..."</p>
-                <p>Leo: "It was so fluffy!!!"</p></div>
-              <h4>Tim and Sonal's Wedding</h4>
-              <div> <p>Tim: "We got a Paul Pogba cupcake and I loved it."</p> </div>
-            </div> <!-- end accordion-->
+            <div class="accordionWedding">
 
-          </div>
+              <button onclick="myFunction('accord1')" class="w3-btn w3-block w3-purple w3-left-align">Steph and Steve's Wedding</button>
+              <div id="accord1" class="w3-container w3-hide">
+                <p>Steves enjoyed his wedding!</p> 
+                <p>Steph did too!</p>
+                <p>Steve loves Steph and he's so happy they're finally married!</p>
+              </div>
+
+              <button onclick="myFunction('accord2')" class="w3-btn w3-block w3-purple w3-left-align">Sophia and Leo's Wedding</button>
+              <div id="accord2" class="w3-container w3-hide">
+                <p>Sophia and Leo ordered a five-tiered Toronto themed cheesecake.</p> 
+                <p>Sophia: "It tasted like heaven..."</p>
+                <p>Leo: "It was so fluffy!!!"</p>
+              </div>
+
+              <button onclick="myFunction('accord3')" class="w3-btn w3-block w3-purple w3-left-align">Tim and Sonal's Wedding</button>
+              <div id="accord3" class="w3-container w3-hide">
+                <p>Tim: "We got a Paul Pogba cupcake and I loved it."</p>
+              </div> 
+
+            </div><!-- end accordionWedding -->
+
+          </div> <!-- end weddings -->
 
           <div id="Celebrations" class="w3-container city" style="display:none">
 
@@ -194,17 +189,28 @@
               <iframe width=100% height="315" src="https://www.youtube.com/embed/DH5PI4QBcnE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div> <!--close columnvideo-->
 
-            <div class="accordion">
-              <h4>Steve and Steph's Wedding</h4>
-              <div> <p>Steve enjoyed his wedding!</p> 
-                <p>Steph did too!</p></div>
-              <h4>Sophia and Leo's Wedding</h4>
-              <div> <p>Sophia and Leo ordered a five-tiered Toronto themed cheesecake.</p> 
+            <div class="accordionCelebrations">
+
+              <button onclick="myFunction('accord4')" class="w3-btn w3-block w3-purple w3-left-align">Steph and Steve's Wedding</button>
+              <div id="accord4" class="w3-container w3-hide">
+                <p>Steves enjoyed his wedding!</p> 
+                <p>Steph did too!</p>
+                <p>Steve loves Steph and he's so happy they're finally married!</p>
+              </div>
+
+              <button onclick="myFunction('accord5')" class="w3-btn w3-block w3-purple w3-left-align">Sophia and Leo's Wedding</button>
+              <div id="accord5" class="w3-container w3-hide">
+                <p>Sophia and Leo ordered a five-tiered Toronto themed cheesecake.</p> 
                 <p>Sophia: "It tasted like heaven..."</p>
-                <p>Leo: "It was so fluffy!!!"</p></div>
-              <h4>Tim and Sonal's Wedding</h4>
-              <div> <p>Tim: "We got a Paul Pogba cupcake and I loved it."</p> </div>
-            </div> <!-- end accordion-->
+                <p>Leo: "It was so fluffy!!!"</p>
+              </div>
+
+              <button onclick="myFunction('accord6')" class="w3-btn w3-block w3-purple w3-left-align">Tim and Sonal's Wedding</button>
+              <div id="accord6" class="w3-container w3-hide">
+                <p>Tim: "We got a Paul Pogba cupcake and I loved it."</p>
+              </div> 
+
+            </div><!-- end accordionCelebrations -->
 
           </div>
 
@@ -218,17 +224,28 @@
               <iframe width=100% height=315 src="https://www.youtube.com/embed/sCbQ9flSRaQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div> <!--close columnvideo-->
 
-            <div class="accordion">
-              <h4>Steve and Steph's Wedding</h4>
-              <div> <p>Steve enjoyed his wedding!</p> 
-                <p>Steph did too!</p></div>
-              <h4>Sophia and Leo's Wedding</h4>
-              <div> <p>Sophia and Leo ordered a five-tiered Toronto themed cheesecake.</p> 
+            <div class="accordionHolidays">
+
+              <button onclick="myFunction('accord7')" class="w3-btn w3-block w3-purple w3-left-align">Steph and Steve's Wedding</button>
+              <div id="accord7" class="w3-container w3-hide">
+                <p>Steves enjoyed his wedding!</p> 
+                <p>Steph did too!</p>
+                <p>Steve loves Steph and he's so happy they're finally married!</p>
+              </div>
+
+              <button onclick="myFunction('accord8')" class="w3-btn w3-block w3-purple w3-left-align">Sophia and Leo's Wedding</button>
+              <div id="accord8" class="w3-container w3-hide">
+                <p>Sophia and Leo ordered a five-tiered Toronto themed cheesecake.</p> 
                 <p>Sophia: "It tasted like heaven..."</p>
-                <p>Leo: "It was so fluffy!!!"</p></div>
-              <h4>Tim and Sonal's Wedding</h4>
-              <div> <p>Tim: "We got a Paul Pogba cupcake and I loved it."</p> </div>
-            </div> <!-- end accordion-->
+                <p>Leo: "It was so fluffy!!!"</p>
+              </div>
+
+              <button onclick="myFunction('accord9')" class="w3-btn w3-block w3-purple w3-left-align">Tim and Sonal's Wedding</button>
+              <div id="accord9" class="w3-container w3-hide">
+                <p>Tim: "We got a Paul Pogba cupcake and I loved it."</p>
+              </div> 
+
+            </div><!-- end accordionHolidays -->
 
           </div><!-- end Holidays-->
         </div> <!-- close w3-container-->
@@ -240,15 +257,12 @@
 
      
     </div> <!-- close content-->
-
     <footer>
 
-      <div class="row1">
-
       <div class="columnfootone">
-        <h3>Contact</h3> 
+        <h3 font-family="PT Sans">Contact</h3> 
         Phone: 412-781-0218 <br>
-        <p>Email: <a href="mailto:info@thebutterwood.com">info@thebutterwood.com</a></p>
+        Email: <a href="mailto:info@thebutterwood.com">info@thebutterwood.com</a>
       </div>
 
       <div class="columnfoottwo">
@@ -266,8 +280,6 @@
         <h3>Hours</h3> 
         Wed–Fri 12PM - 11PM <br> Sat 10AM - 11PM <br> Sun 10AM - 9PM
       </div> <!-- close column -->
-
-      </div> <!-- close row -->
 
     </footer>
 

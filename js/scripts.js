@@ -13,7 +13,7 @@ function validate() {
     alert("Zip code must be a number.");
     return false;
   }
-  if (txtZipcode >= 10000 || txtZipcode < 100000) {
+  if (txtZipcode < 10000 || txtZipcode >= 100000) {
     alert("Zip code must be 5 digits.");
     return false;
   }

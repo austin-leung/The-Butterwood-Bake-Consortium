@@ -3,6 +3,7 @@
 *{
   margin: 0;
   padding: 0;
+  /*background: #fff9ea;*/
 }
 
 
@@ -28,11 +29,6 @@ a:hover {
   width: 100%;
   margin: 10px auto; /* Sets 10px to the top and the the browser will center with auto */
   /* border: 1px solid gray; */
-}
-
-/* The top row - spans all columns for header and nav */
-#top_row {
-  margin-bottom: 20px;
 }
 
 #top_row header {
@@ -91,17 +87,16 @@ a:hover {
   /* Hover adds special style to an element when you mouse over it */
   
 #top_row nav a.selected:hover {
-  background: #f6f6f6;
   color: #f1bb99; 
 }
 
 #top_row nav a:hover {  
-  background: #f6f6f6;
   color: #f1bb99;
 }
 
 #content {
   width: 100%;
+  margin: 2%;
 }
 
 #content h3 {
@@ -132,6 +127,7 @@ footer {
   text-align: center;
   border-top: 1px dotted #cccccc;
   column-count: 4;
+  color: #0c5829;
   /* background-color: #ddd; */
 }
 
@@ -148,7 +144,6 @@ table {
 }
 th {
   height: 40px;
-  font-weight: bold;
   border-width: 1px;
 }
 th, td {
@@ -162,7 +157,6 @@ th, td {
 
 tr {
   color: #7FFFFF;
-  font-family: "Arial", Helvetica, Arial, Sans-serif;
 }
 
 
@@ -176,19 +170,12 @@ form {
   border-color: #f1bb99;
   border-radius: 1%;
   padding: 10px;  
-  margin: 2%;
+  margin-right: 3%;
+  margin-bottom: 10px;
 }
 
-legend {
-  font-weight: bold;
-  text-align: left;
-  color: #58290c;
-  margin-bottom: 5px;
-  margin-left: 5px;
-}
 
 label {
-  font-weight: bold;
   text-align: center;
 }
 
@@ -197,7 +184,6 @@ html { overflow-y: scroll; }
 
 iframe {
   display: block;
-  margin: auto;
 }
 
 .columnlefttext {
