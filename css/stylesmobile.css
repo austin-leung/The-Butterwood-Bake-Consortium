@@ -21,9 +21,12 @@
     margin-right: 44%;
   }
 
-
   #top_row header {
     margin-bottom: 0em; /* do not move nav up */
+  }
+
+  #top_row nav {
+    margin-left: 0px;
   }
 
   /* change nav style*/
@@ -111,6 +114,10 @@
   .columnfootfour {
     width: 100%;
     height: 100px;
+  }
+
+  .columnfootfive {
+    display: none;
   }
 
 }

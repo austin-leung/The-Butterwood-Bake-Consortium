@@ -48,14 +48,15 @@ a:hover {
 
 #top_row nav {
   text-align: center;  /* center the nav text */
+  margin-left: 240px;
 }
 
 #top_row nav a {
   text-decoration: none;
   font-size: 1.125em;
   font-weight: 400;
-  margin-left: 5%; /* space out nav links */
-  margin-right: 5%;
+  margin-left: 7%; /* space out nav links */
+  margin-right: 7%;
   color: #580c3b;
 }
 
@@ -114,7 +115,7 @@ footer {
   font-size: .813em;
   text-align: center;
   border-top: 1px dotted #cccccc; /* border above the footer delineating it */
-  column-count: 4;
+  column-count: 5;
   color: #0c5829;
 }
 
@@ -238,6 +239,11 @@ iframe {
 }
 
 .columnfootfour {
+  width: 100%;
+  height: 108px;
+}
+
+.columnfootfive {
   width: 100%;
   height: 108px;
 }
