@@ -6,8 +6,8 @@
   <!-- META tags help search engines identify your content more easily -->
   <meta charset="utf-8" /> <!-- Specifies the character encoding for the HTML document -->
   <meta name="author" content="Austin Leung">
-  <meta name="keywords" content="Carnegie Mellon University, Information Systems, resume">
-  <meta name="description" content="Austin Leung Professional Website">
+  <meta name="keywords" content="Butterwood Bake Consortium, cake">
+  <meta name="description" content="Butterwood Bake Consortium Official Website">
 
   <!-- The title will appear in the menu bar of the browser -->
   
@@ -21,6 +21,7 @@
   <script src="http://code.highcharts.com/highcharts.js"></script>
   <script src="http://code.highcharts.com/modules/exporting.js"></script>
 
+  <!-- Makes container-graph1 a highchart -->
   <script type="text/javascript">
     $(function() {
       $('#container-graph1').highcharts({
@@ -33,7 +34,7 @@
                 text: 'Hour'
               },
               categories: ['12pm', '1pm', '2pm', '3pm', '4pm', '5pm',
-                '6pm', '7pm', '8pm', '9pm', '10pm', '11pm']
+                '6pm', '7pm', '8pm', '9pm', '10pm', '11pm'] /* x-axis categories */
             },
 
             yAxis: {
@@ -49,12 +50,13 @@
 
             series: [{
               showInLegend: false,
-              data: [10, 8, 24, 5, 7, 32, 16, 18, 27, 39, 32, 22]
+              data: [10, 8, 24, 5, 7, 32, 16, 18, 27, 39, 32, 22] /* people on avg (corresponding to x-axis category hours) */
             }],
         });
     });
   </script>
 
+  <!-- Makes container-graph2 a highchart-->
   <script type="text/javascript">
     $(function() {
       $('#container-graph2').highcharts({
@@ -82,28 +84,31 @@
 
             series: [{
               showInLegend: false,
-              data: [30, 33, 50, 48, 25, 28, 27, 24, 46, 66, 73, 70]
+              data: [30, 33, 50, 48, 25, 28, 27, 24, 46, 66, 73, 70] /* people on avg (corresponding to category hours) */
             }],
         });
     });
   </script>
 
   <style>
+
+    /* groups all elements of this page together with a border */
     .storeinfo {
       border: 3px solid #f1bb99;
       border-radius: 1%;
-      width: 82%;
+      width: 82%; /* shifted to the right because logo */
       padding: 10px;
       margin-right: 3%;
       float: right;
       margin-bottom: 2%;
     }
 
+    /* makes the table and contact form half height of storeinfo*/
     .storeinfoRow1 {
       height: 50%;
     }
 
-
+    /* table is about half of the width of storeinfo */
     .storeinfotable {
       width: 43%;
       height: auto;
@@ -117,11 +122,15 @@
       width: 100%;
     }
 
+    /* sets image size in table with margins */
     .storeinfotable img {
-      width: 39%;
+      width: 38.3%;
       height: auto;
+      margin-top: 6px;
+      margin-bottom: 0px;
     }
 
+    /* styles form as half of width of store info and gives it borders and margins */
     form {
       width: 43%;
       float: right;
@@ -136,6 +145,7 @@
       margin-bottom: 2%;
     }
 
+    /* styles graph1 as half the width of store info */
     #container-graph1 {
       width: 45%;
       float: left;
@@ -145,6 +155,7 @@
       margin-bottom: 2%;
     }
 
+    /* styles graph2 as right half the width of store info */
     #container-graph2 {
       width: 45%;
       float: left;
@@ -153,33 +164,25 @@
       margin-bottom: 2%;
     }
 
+    /* styles size of map*/
     iframe {
       width: 100%;
       height: auto;
     }
 
-    input[type=text], input[type=zipcode], input[type=email] {
+    /* gives form inputs style */
+    input[type=text], input[type=zipcode], input[type=email], textarea {
       width: 100%;
-      padding: 4px 5px;
+      padding: 4px 5px; /* space around characters in text box */
       margin: 8px 0;
       box-sizing: border-box;
       border: 1px solid #58290c;
       border-radius: 4px;
-      background-color: #eaf0ff;
+      background-color: #eaf0ff; /* change background color */
       color: #58290c;
     }
 
-    textarea {
-      width: 100%;
-      padding: 4px 5px;
-      margin: 8px 0;
-      box-sizing: border-box;
-      border: 1px solid #58290c;
-      border-radius: 4px;
-      background-color: #eaf0ff;
-      color: #58290c;
-    }
-
+    /* submit button */
     input[type=submit] {
       background-color: #580c3b;
       border: none;
@@ -192,20 +195,17 @@
       font-size: 20px;
     }
 
+    /* styles store info table */
     table {
       border-color: #580c3b;
     }
 
+    /* styles "Store and Contact Information" */
     h2 {
       font-family: "PT Sans";
       color: #580c3b;
       font-weight: 400;
     }
-
-    h3 {
-      font-family: "PT Sans";
-    }
-
 
   </style>
 
@@ -219,11 +219,11 @@
 
     <div id="top_row">
   
-      <header> <!-- Header is new tag in HTML 5 -->
+      <header> 
         <img src="images/logo.png" alt="Butterwood Logo">
       </header>
       
-      <nav> <!-- Nav is new tag in HTML 5 -->
+      <nav> 
           <li><a href="index.html">Home</a> </li> <!-- Navigation to other pages in our website - these are relative links --> 
           <li><a href="special.html">Special Occasions</a> </li>
           <li><a href="custom.html">Custom Orders</a> </li>
@@ -237,13 +237,16 @@
 
       <div class="storeinfo">
 
-        <h2>Store Information</h2><br>
+        <h2>Store and Contact Information</h2><br>
 
-        <div class="storeinfoRow1">
+        <div class="storeinfoRow1"> <!-- includes the table and form in a row -->
 
-          <div class="storeinfotable">
+          <div class="storeinfotable"> <!-- table -->
+
             <table border="4">
-              <th colspan=2><a href="https://www.google.com/maps/place/5222+Butler+St,+Pittsburgh,+PA+15201/data=!4m2!3m1!1s0x8834f2f8094aa81b:0x8460b792bcc058aa?sa=X&ved=2ahUKEwjxoOa5ipzhAhWthOAKHckzC4cQ8gEwAHoECAoQAQ" target="_blank"><img src="images/store.jpg" alt="store"></a></th>
+
+              <th colspan=2><a href="https://www.google.com/maps/place/5222+Butler+St,+Pittsburgh,+PA+15201/data=!4m2!3m1!1s0x8834f2f8094aa81b:0x8460b792bcc058aa?sa=X&ved=2ahUKEwjxoOa5ipzhAhWthOAKHckzC4cQ8gEwAHoECAoQAQ" target="_blank"><img src="images/store.jpg" alt="store"></a></th> <!-- pictures spans two columns and is a link to google maps -->
+
                 <tr>
                   <td>Address</td>
                   <td>Lawrenceville 5222 Butler St Pittsburgh, PA 15201<br>
@@ -266,27 +269,28 @@
                   <td>Wed–Fri 12PM - 11PM <br> Sat 10AM - 11PM <br> Sun 10AM - 9PM</td> 
                 </tr>
             </table>
+
           </div> <!-- close storeinfotable -->
 
 
-          <form action="mailto:infoneeded@butterwoodBC.com." target="_blank" onsubmit="return validate()">
+          <form action="mailto:infoneeded@butterwoodBC.com." target="_blank" onsubmit="return validate()"> <!-- * means required -->
             <h2>Contact Us!</h2><br>
             <label for="uname">Name:</label>*<br>
             <input type="text" id="uname" name="uname" value="" size="20" maxlength ="250" Placeholder="John Doe"required><br>
             <label for="txtZipcode">Zip Code:</label><br>
-            <input type="zipcode" id="txtZipcode" name="txtZipcode" value="" size="20" maxlength="5" Placeholder="67250"><br>
+            <input type="zipcode" id="txtZipcode" name="txtZipcode" value="" size="20" maxlength="5" Placeholder="67250"><br> <!-- zipcode will be validated -->
             <label for="email">Email Address:</label>*<br>
             <input type="email" id="email" name="email" value="" Placeholder="cake@gmail.com" required><br>
             <input type="checkbox" id="signup" name="signup" value="yes"> Yes, I would like to subscribe to Butterwood Bake Consortium's mailing list!<br>
             <label fr="message">Message:</label>* <br/>
             <textarea required id="message" name="message" value="Type your Message" rows="10" cols="50" maxlength="1000"></textarea><br/>
 
-            <input type="submit" name= "btnimage" value ="Submit">
-          
+            <input type="submit" name= "btnimage" value ="Submit"> <!-- submit is a button -->
           </form>
+
         </div><!--close storeinfoRow1-->
 
-        <div id="hrLine"> <hr> </div>
+        <div id="hrLine"> <hr> </div> <!-- makes a line between the form/table and highcharts-->
 
         <div id="container-graph1"></div>
         <div id="container-graph2"></div>
@@ -297,8 +301,6 @@
     </div> <!-- close content-->
 
     <footer>
-
-      <div class="row1">
 
       <div class="columnfootone">
         <h3>Contact</h3> 
@@ -321,8 +323,6 @@
         <h3>Hours</h3> 
         Wed–Fri 12PM - 11PM <br> Sat 10AM - 11PM <br> Sun 10AM - 9PM
       </div> <!-- close column -->
-
-      </div> <!-- close row -->
 
     </footer>
 

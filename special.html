@@ -6,8 +6,8 @@
   <!-- META tags help search engines identify your content more easily -->
   <meta charset="utf-8" /> <!-- Specifies the character encoding for the HTML document -->
   <meta name="author" content="Austin Leung">
-  <meta name="keywords" content="Carnegie Mellon University, Information Systems, resume">
-  <meta name="description" content="Austin Leung Professional Website">
+  <meta name="keywords" content="Butterwood Bake Consortium, cake">
+  <meta name="description" content="Butterwood Bake Consortium Official Website">
 
   <!-- The title will appear in the menu bar of the browser -->
   
@@ -17,6 +17,8 @@
   <script type="text/javascript" src="js/scripts.js" > </script>
 
   <script>
+
+    /* opens a tab, javascript from w3 schools https://www.w3schools.com/w3css/w3css_tabulators.asp */
     function openCity(evt, cityName) {
       var i, x, tablinks;
       x = document.getElementsByClassName("city");
@@ -31,6 +33,7 @@
       evt.currentTarget.firstElementChild.className += " w3-border-green";
     }
 
+    /* accordion functionality, javascript from w3 schools https://www.w3schools.com/w3css/w3css_accordions.asp*/
     function myFunction(id) {
       var x = document.getElementById(id);
       if (x.className.indexOf("w3-show") == -1) {
@@ -44,6 +47,7 @@
   <style>
 
 
+  /* The video should be half of the tab (left side)*/
   .columnvideo {
     width: 46%;
     float: left;
@@ -51,6 +55,7 @@
     margin-right: 2%;
   }
 
+  /* The accordion should be half of the tab (right side) */
   .accordionWedding, .accordionCelebrations, .accordionHolidays{
     width: 46%;
     height: 100%;
@@ -59,29 +64,40 @@
     margin-right: 2%;
   }
 
+  /* columnmiddleS is the tab */
   .columnmiddleS {
-    width: 82%;
+    width: 83.8%; /* leave space on the left side of the page where logo is */
     float: right;
+    height: auto; 
+    border-style: solid;
+    border-width: 3px;
+    border-color: #f1bb99; /* make a border like the custom and contact */
+    border-radius: 1%;
+    padding: 10px;  
     margin-right: 3%;
     margin-left: 2%;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* space before footer */
   }
 
+  /* for weddings, celebrations, holidays headings */
   h2, h4 {
     font-family: "PT Sans", sans-serif;
     color: #580c3b;
   }
 
+  /* for subheadings such as delivery */
   #content h3 {
     font-family: "PT Sans", sans-serif;
   }
 
+  /* background of the accordion */
   #accord1, #accord2, #accord3, #accord4, 
   #accord5, #accord6, #accord7, #accord8 {
     padding: 10px;
     background-color: #eaf0ff;
   }
   
+  /* overwrite tabs.css formatting for footer */
   footer {
     clear: both; /* The clear property specifies which side(s) of an element other floating elements are not allowed. */
     padding: 0.5em;
@@ -95,6 +111,7 @@
     font-family: "PT Sans", sans-serif;
   }
 
+  /* overwrite tabs.css formatting for footer headers */
   h3 {
     display: block;
     font-size: 1.17em;
@@ -104,6 +121,9 @@
     margin-inline-end: 0px;
     font-weight: bold;
   }
+
+  /* overwrite the tabs.css nav formatting using a nav2 id */
+  /* uses same style as nav in styles.css */
 
   #nav2 {
     text-align: center;
@@ -131,6 +151,8 @@
     color: #f1bb99;
   }
 
+  /* overwrite tabs.css body styling */
+
   body {
     font-family: "PT Sans";
     font-size: 100%;
@@ -155,11 +177,11 @@
 
     <div id="top_row">
   
-      <header> <!-- Header is new tag in HTML 5 -->
+      <header> 
         <img src="images/logo.png" alt="Butterwood Logo">
       </header>
       
-      <div id="nav2"> <!-- Nav is new tag in HTML 5 -->
+      <div id="nav2"> <!-- used instead of nav to overwrite tabs.css styling -->
           <li><a href="index.html">Home</a> </li> <!-- Navigation to other pages in our website - these are relative links --> 
           <li><a class="selected" href="special.html">Special Occasions</a> </li>
           <li><a href="custom.html">Custom Orders</a> </li>
@@ -171,13 +193,12 @@
 
     <div id="content">
 
-      <div class="columnleftS">
-      </div> <!-- close column left-->
-
       <div class="columnmiddleS">
-        <div class="w3-container">
+
+        <div class="w3-container"> <!-- Contains all the tabs -->
           <h2>Special Occasions</h2>
 
+          <!-- Displaying the tabs and using openCity to open the tab if clicked-->
           <div class="w3-row">
             <a href="javascript:void(0)" onclick="openCity(event, 'Weddings');">
               <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Weddings</div>
@@ -205,12 +226,15 @@
             <h3>Delivery:</h3>
             <p>We co-ordinate with the reception venue, florist, etc. for the timing of the delivery of the cake. Delivery fees vary by location. Smaller cakes can be packed by us to facilitate pick-up at the bakery.</p><br><br>
 
-            <div class="columnvideo">
+            <div class="columnvideo"> <!-- Video on the bottom and right side of the tab-->
+
               <iframe width=100% height=315 src="https://www.youtube.com/embed/fj5gEVWbrN4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
             </div> <!--close columnvideo-->
 
-            <div class="accordionWedding">
+            <div class="accordionWedding"> <!-- Accordion on the bottom and left side of the tab-->
 
+              <!-- My function should open/close accord1-->
               <button onclick="myFunction('accord1')" class="w3-btn w3-block w3-purple w3-left-align">Steph and Steve's Wedding</button>
               <div id="accord1" class="w3-container w3-hide">
                 <p>Steve loved the flowery gold leaf cake.</p> 
@@ -245,7 +269,9 @@
             <p>Delivery fees vary by location. Smaller cakes can be packed by us to facilitate pick-up at the bakery.</p><br>
 
             <div class="columnvideo">
+
               <iframe width=100% height="315" src="https://www.youtube.com/embed/DH5PI4QBcnE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
             </div> <!--close columnvideo-->
 
             <div class="accordionCelebrations">
@@ -253,7 +279,7 @@
               <button onclick="myFunction('accord4')" class="w3-btn w3-block w3-purple w3-left-align">Alvin's Graduation</button>
               <div id="accord4" class="w3-container w3-hide">
                 <p>Alvin: The staff was super friendly.</p>
-                <ul>
+                <ul> <!-- unordered list of Alvin's thoughts-->
                   <li>They were willing to change my order at the last minute</li>
                   <li>They maintained close communcation on status throughout the process</li>
                   <li>They treat their customers like family</li>
@@ -277,7 +303,7 @@
 
             </div><!-- end accordionCelebrations -->
 
-          </div>
+          </div> <!-- end Celebrations -->
 
           <div id="Holidays" class="w3-container city" style="display:none">
 
@@ -286,7 +312,9 @@
             <p>Easter is right around the corner. Check out our baked goods that are perfect for your fun, colorful weekend, ranging from Easter themed cookies, cakes, cupcakes, and more.</p><br>
 
             <div class="columnvideo">
+
               <iframe width=100% height=315 src="https://www.youtube.com/embed/sCbQ9flSRaQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
             </div> <!--close columnvideo-->
 
             <div class="accordionHolidays">
@@ -309,15 +337,13 @@
             </div><!-- end accordionHolidays -->
 
           </div><!-- end Holidays-->
+
         </div> <!-- close w3-container-->
       
-      </div> <!-- close column middle-->
-
-      <div class="columnrightS">
-      </div> <!-- close column right-->
-
+      </div> <!-- close columnmiddleS-->
      
     </div> <!-- close content-->
+    
     <footer>
 
       <div class="columnfootone">

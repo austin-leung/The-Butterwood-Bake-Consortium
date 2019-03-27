@@ -6,8 +6,8 @@
   <!-- META tags help search engines identify your content more easily -->
   <meta charset="utf-8" /> <!-- Specifies the character encoding for the HTML document -->
   <meta name="author" content="Austin Leung">
-  <meta name="keywords" content="Carnegie Mellon University, Information Systems, resume">
-  <meta name="description" content="Austin Leung Professional Website">
+  <meta name="keywords" content="Butterwood Bake Consortium, cake">
+  <meta name="description" content="Butterwood Bake Consortium Official Website">
 
   <!-- The title will appear in the menu bar of the browser -->
   
@@ -21,32 +21,23 @@
 
   <style>
 
-    input[type=text], input[type=zipcode], input[type=email], input[type=billingAddress], input[type=datetime-local], select{
+    /* Format most of the inputs in the form */
+    input[type=text], input[type=zipcode], input[type=email], input[type=billingAddress], input[type=datetime-local], select, textarea{
       width: 100%;
-      padding: 4px 5px;
+      padding: 4px 5px; /* space around words in input box */
       margin: 8px 0;
       box-sizing: border-box;
-      border: 1px solid #58290c;
+      border: 1px solid #58290c; /* border around input box */
       border-radius: 4px;
-      background-color: #eaf0ff;
-      color: #58290c;
+      background-color: #eaf0ff; /* change background of input box */
+      color: #58290c; /* change input text color */
     }
 
-    textarea {
-      width: 100%;
-      padding: 4px 5px;
-      margin: 8px 0;
-      box-sizing: border-box;
-      border: 1px solid #58290c;
-      border-radius: 4px;
-      background-color: #eaf0ff;
-      color: #58290c;
-    }
-
+    /* Make a submit button */
     input[type=submit] {
-      background-color: #580c3b;
+      background-color: #580c3b; /* purple color */
       border: none;
-      color: white;
+      color: white; /* white text */
       padding: 16px 32px;
       text-decoration: none;
       margin: 4px 2px;
@@ -55,9 +46,16 @@
       font-size: 20px;
     }
 
+    /* Style "Custom Pie Order Form" */
     h2 {
       font-family: "PT Sans";
       color: #580c3b;
+      font-weight: 400;
+    }
+
+    /* Style "Order below ... " */
+    h4 {
+      font-family: "PT Sans";
       font-weight: 400;
     }
 
@@ -72,13 +70,13 @@
 
   <div id="container">
 
-    <div id="top_row">
+    <div id="top_row"> <!-- logo and nav -->
   
       <header> <!-- Header is new tag in HTML 5 -->
         <img src="images/logo.png" alt="Butterwood Logo">
       </header>
       
-      <nav> <!-- Nav is new tag in HTML 5 -->
+      <nav> 
           <li><a href="index.html">Home</a> </li> <!-- Navigation to other pages in our website - these are relative links --> 
           <li><a href="special.html">Special Occasions</a> </li>
           <li><a class="selected" href="custom.html">Custom Orders</a> </li>
@@ -89,17 +87,25 @@
     </div> <!-- close top_row-->
 
     <div id="content">
-      <form onsubmit="return validatePickup()">
+      <form onsubmit="return validatePickup()"> <!-- Make sure phone and date/time is valid on submit -->
 
-        <h2>Custom Pie Order Form</h2><br>
-        <label for="uname">First and Last Name:</label>*
+        <h2>Custom Pie Order Form</h2>
+        <h4>Order below (or call 412-781-0218).</h4>
+        <p>Please note: We require at least 3 business days notice for cake orders. Your order is not official until you have received email or phone confirmation from us. </p><br>
+
+        <label for="uname">First and Last Name:</label>* <!-- * indicates required -->
         <input type="text" id="uname" name="uname" value="" size="20" maxlength ="250" Placeholder="John Doe"required><br>
+
         <label for="txtBillingAddress">Billing Address:</label>*
         <input type="billingAddress" id="txtBillingAddress" name="txtBillingAddress" value="" size="20" maxlength="250" Placeholder="5222 Butler St Pittsburgh, PA 15201" required><br>
+
         <label for="email">Email Address:</label>*
         <input type="email" id="email" name="email" value="" Placeholder="cake@gmail.com" required><br>
+
         <label for="phone">Phone Number:</label>* (no dashes or space, 10 digits)
         <input type="text" id="phone" Placeholder="4127810218" required><br>
+
+        <!-- Select is a dropdown -->
         <label for="pieQuantity">Pie Quantity:</label> 
         <select name="pieQuantity">
           <option value="1" selected>1</option>
@@ -113,6 +119,7 @@
           <option value="9">9</option>
           <option value="10">10</option>
         </select><br>
+
         <label for="pieType">Pie Type:</label>
         <select name="pieType">
           <option value="Apple" selected>Apple</option>
@@ -127,19 +134,20 @@
           <option value="Sweet Potato">Sweet Potato</option>
           <option value="Vanilla Custard">Vanilla Custard</option>
         </select><br>
+
         <label for="txtDate">Pickup Date and Time:</label>*
-        <input type="datetime-local" id="txtDate" name="txtDate" value="" size="20" maxlength ="250" required><br/>
+        <input type="datetime-local" id="txtDate" name="txtDate" value="" size="20" maxlength ="250" required><br> <!-- datetime-local allows you to input a date and time -->
+
         <label fr="specialInstructions">Special Instructions:</label>
-        <textarea id="specialInstructions" name="specialInstructions" value="" rows="10" cols="50" maxlength="1000"> </textarea><br>
+        <textarea id="specialInstructions" name="specialInstructions" value="" rows="10" cols="50" maxlength="1000"> </textarea><br> <!-- Put more rows and cols for this text area as it may be longer-->
       
-        <input type="submit" name= "btnimage" value ="Submit">
+        <input type="submit" name= "btnimage" value ="Submit"> <!-- This is styled as a button-->
       
       </form>
+
     </div> <!-- close content-->
 
     <footer>
-
-      <div class="row1">
 
       <div class="columnfootone">
         <h3>Contact</h3> 
@@ -162,8 +170,6 @@
         <h3>Hours</h3> 
         Wed–Fri 12PM - 11PM <br> Sat 10AM - 11PM <br> Sun 10AM - 9PM
       </div> <!-- close column -->
-
-      </div> <!-- close row -->
 
     </footer>
 

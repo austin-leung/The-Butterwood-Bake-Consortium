@@ -1,5 +1,6 @@
 /* CSS Document */
-/* Slash-Star begins a comment, and then Star-Slash ends a comment */
+
+/* Intialize margin and padding as 0*/
 *{
   margin: 0;
   padding: 0;
@@ -9,26 +10,25 @@
 body {
   font-family: "PT Sans";
   font-size: 100%; /* Generally set the font-size to 100% in the body - you can then change with em in the other areas */
-  line-height: 1.7em; /* The line-height property in CSS controls the space between lines of text. It is often set in a unitless value (e.g. line-height: 1.4; ) */
+  line-height: 1.7em; /* Space between lines */
   color: #000000; /* Hex Color Black */
-  background: #fff9ea;
+  background: #fff9ea; /* Background of whole page */
 }
 
 a { 
-  color: #0F4970;
+  color: #0F4970; /* default color of links */
   text-decoration: none;
 }
 
 a:hover { 
-  color: #0c5829;
-  text-decoration: underline;
+  color: #0c5829; /* link color when hovered over */
+  text-decoration: underline; /* underline hovered links */
 }
 
 /* The container ID will hold our full webpage together */
 #container {
   width: 100%;
   margin: 10px auto; /* Sets 10px to the top and the the browser will center with auto */
-  /* border: 1px solid gray; */
 }
 
 #top_row header {
@@ -37,7 +37,7 @@ a:hover {
 
 #top_row h1 {
   color: #0F4970; /* Blue color for header */
-  font-size: 3.75em; /* http://pxtoem.com/ */
+  font-size: 3.75em;
   letter-spacing: -2px; /* The letter-spacing property increases or decreases the space between characters in a text. */
 }
 
@@ -47,25 +47,25 @@ a:hover {
 }
 
 #top_row nav {
-  text-align: center; 
+  text-align: center;  /* center the nav text */
 }
 
 #top_row nav a {
   text-decoration: none;
   font-size: 1.125em;
   font-weight: 400;
-  margin-left: 5%;
+  margin-left: 5%; /* space out nav links */
   margin-right: 5%;
   color: #580c3b;
 }
 
 #top_row nav a.selected {
-  color: #f1bb99; 
+  color: #f1bb99;  /* change color of nav page if selected */
 }
 
 #top_row li {
-  display: inline;
-  border-right: 1px solid #bbb;
+  display: inline; /* display nav horizontally */
+  border-right: 1px solid #bbb; /* add borders on both sides */
   border-left: 1px solid #bbb;
 }
 
@@ -76,27 +76,21 @@ a:hover {
   height: auto;
 }
 
-  /* http://www.w3schools.com/cssref/pr_class_display.asp */
-
-  /* Creating a Links display option and roll-over / Pseudo-Element */
-  /* CSS pseudo-elements are used to add special effects to some selectors. */
-  /* More at http://www.w3schools.com/css/css_pseudo_elements.asp */
   
-  
-  /* Hover adds special style to an element when you mouse over it */
-  
+/* Hover adds special style to an element when you mouse over it */  
 #top_row nav a.selected:hover {
   color: #f1bb99; 
 }
 
 #top_row nav a:hover {  
-  color: #f1bb99;
+  color: #f1bb99; 
 }
 
 #content {
   width: 100%;
-  margin: 2%;
+  margin: 2%; 
 }
+
 
 #content h3 {
   font-size: 1.5em;
@@ -105,16 +99,11 @@ a:hover {
 }
 
 #tabs a {
-  color: #C52222;
+  color: #C52222; /* Tab links have a different color */
 }
 
 #tabs {
-  color: #255555;
-}
-
-#description {
-  color: #255555;
-  text-align: center;
+  color: #255555; /* Tab text has a different color*/
 }
 
 footer {
@@ -124,10 +113,9 @@ footer {
   font-variant: small-caps; 
   font-size: .813em;
   text-align: center;
-  border-top: 1px dotted #cccccc;
+  border-top: 1px dotted #cccccc; /* border above the footer delineating it */
   column-count: 4;
   color: #0c5829;
-  /* background-color: #ddd; */
 }
 
 /* Table Styling */
@@ -141,11 +129,15 @@ table {
   table-layout: auto;
   border-collapse: collapse;
 }
+
+/* headers*/
 th {
   height: 40px;
   border-width: 1px;
 }
-th, td {
+
+/* headers and elements*/
+th, td { 
   padding: 2px;
   text-align: center;
   border-style: solid;
@@ -161,31 +153,30 @@ tr {
 
 /* Form Styling */
 form {
-  width: 82%;
-  float: right;
+  width: 82%; /* don't take all the space */
+  float: right; /* move forms to the right to give space for logo */
   height: auto;
   border-style: solid;
   border-width: 3px;
   border-color: #f1bb99;
-  border-radius: 1%;
+  border-radius: 1%; /* make borders slightly circular */
   padding: 10px;  
   margin-right: 3%;
   margin-left: 2%;
   margin-bottom: 20px;
 }
 
-
 label {
   text-align: center;
 }
 
-html { overflow-y: scroll; }
-/* http://www.w3schools.com/cssref/css3_pr_overflow-y.asp */
+html { overflow-y: scroll; } /* scrolling if overflows*/
 
 iframe {
   display: block;
 }
 
+/* leftmost column */
 .columnlefttext {
   float: right;
   width: 20%;
@@ -193,17 +184,19 @@ iframe {
   margin-right: 2%;
 }
 
+/* third column */
 .columnmiddle {
   float: right;
   width: 20%;
 }
 
 .columnmiddle img {
-  border-radius: 30%;
+  border-radius: 30%; /* round image */
   width: 80%;
   height: auto;
 }
 
+/* rightmost column */
 .columnleft {
   float: right;
   width: 20%;
@@ -216,6 +209,7 @@ iframe {
   height: auto;
 }
 
+/* second column */
 .columnright {
   float: right;
   width: 20%;
@@ -227,6 +221,7 @@ iframe {
   height: auto;
 }
 
+/* footer has four columns */
 .columnfootone {
   width: 100%;
   height: 108px;
@@ -247,6 +242,7 @@ iframe {
   height: 108px;
 }
 
+/* buttons are purple with white text */
 .button {
   background-color: #580c3b;
   border: none;
@@ -263,9 +259,10 @@ iframe {
 }
 
 ol, ul {
-  list-style-position: inside;
+  list-style-position: inside; /* move bullet points inside */
 }
 
+/* style hr line */
 hr {
   border: 1px solid #f1bb99;
   display: block;
@@ -273,8 +270,7 @@ hr {
   margin-bottom: 0.5em;
 }
 
-html { overflow-y: scroll; }
-
+/* responsive to size */
 .responsive {
     max-width: 100%;
     height: auto;
