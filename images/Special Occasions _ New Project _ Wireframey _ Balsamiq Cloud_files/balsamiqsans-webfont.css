@@ -1,0 +1,27 @@
+@font-face {
+    src: local("Balsamiq Sans"), url("balsamiqsansregular-webfont.woff") format('woff');
+    font-family: "Balsamiq Sans";
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    src: local("Balsamiq Sans"), url("balsamiqsansbold-webfont.woff") format('woff');
+    font-family: "Balsamiq Sans";
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    src: local("Balsamiq Sans"), url("balsamiqsansitalic-webfont.woff") format('woff');
+    font-family: "Balsamiq Sans";
+    font-style: italic;
+    font-weight: normal;
+}
+
+@font-face {
+    src: local("Balsamiq Sans"), url("balsamiqsansbolditalic-webfont.woff") format('woff');
+    font-family: "Balsamiq Sans";
+    font-style: italic;
+    font-weight: bold;
+}

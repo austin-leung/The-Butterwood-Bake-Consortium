@@ -54,7 +54,6 @@ a:hover {
   text-decoration: none;
   font-size: 1.125em;
   font-weight: 400;
-  width: 5%;
   margin-left: 5%;
   margin-right: 5%;
   color: #580c3b;
@@ -228,25 +227,24 @@ iframe {
   height: auto;
 }
 
-/* Clear floats after the columns */
 .columnfootone {
   width: 100%;
-  height: 170px;
+  height: 108px;
 }
 
 .columnfoottwo {
   width: 100%;
-  height: 170px;
+  height: 108px;
 }
 
 .columnfootthree {
   width: 100%;
-  height: 170px;
+  height: 108px;
 }
 
 .columnfootfour {
   width: 100%;
-  height: 170px;
+  height: 108px;
 }
 
 .button {
@@ -261,6 +259,7 @@ iframe {
   margin: 4px 2px;
   cursor: pointer;
   width: 150px;
+  margin-bottom: 20px;
 }
 
 ol, ul {

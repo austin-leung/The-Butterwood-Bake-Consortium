@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)file:///Users/Austin/Desktop/67-250/project/custom.html -->
+<html lang="en"><!-- Root of the html document and is in English --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <!-- META tags help search engines identify your content more easily -->
+   <!-- Specifies the character encoding for the HTML document -->
+  <meta name="author" content="Austin Leung">
+  <meta name="keywords" content="Carnegie Mellon University, Information Systems, resume">
+  <meta name="description" content="Austin Leung Professional Website">
+
+  <!-- The title will appear in the menu bar of the browser -->
+  
+  <link rel="stylesheet" media="all" type="text/css" href="file:///Users/Austin/Desktop/67-250/project/css/styles.css">
+  <link rel="stylesheet" media="all" type="text/css" href="file:///Users/Austin/Desktop/67-250/project/css/jquery-ui.css">
+  <link rel="stylesheet" media="screen and (max-width: 480px)" href="file:///Users/Austin/Desktop/67-250/project/css/stylesmobile.css">
+  
+  <script type="text/javascript" src="file:///Users/Austin/Desktop/67-250/project/js/jquery-3.3.1.min.js"> </script>
+  <script type="text/javascript" src="file:///Users/Austin/Desktop/67-250/project/js/scripts.js"> </script>
+  <script type="text/javascript" src="file:///Users/Austin/Desktop/67-250/project/js/jquery-ui.js"> </script>
+
+  <style>
+
+    input[type=text], input[type=zipcode], input[type=email], input[type=billingAddress], input[type=datetime-local], select{
+      width: 100%;
+      padding: 4px 5px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 1px solid #58290c;
+      border-radius: 4px;
+      background-color: #eaf0ff;
+      color: #58290c;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 4px 5px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 1px solid #58290c;
+      border-radius: 4px;
+      background-color: #eaf0ff;
+      color: #58290c;
+    }
+
+    input[type=submit] {
+      background-color: #580c3b;
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-decoration: none;
+      margin: 4px 2px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 20px;
+    }
+
+    h2 {
+      font-family: "PT Sans";
+      color: #580c3b;
+      font-weight: 400;
+    }
+
+
+  </style>
+  
+</head>
+
+<body>
+
+  <div id="container">
+
+    <div id="top_row">
+  
+      <header> <!-- Header is new tag in HTML 5 -->
+        <img src="file:///Users/Austin/Desktop/67-250/project/images/logo.png" alt="Butterwood Logo">
+      </header>
+      
+      <nav> <!-- Nav is new tag in HTML 5 -->
+          <li><a href="file:///Users/Austin/Desktop/67-250/project/index.html">Home</a> </li> <!-- Navigation to other pages in our website - these are relative links --> 
+          <li><a href="file:///Users/Austin/Desktop/67-250/project/special.html">Special Occasions</a> </li>
+          <li><a class="selected" href="file:///Users/Austin/Desktop/67-250/project/custom.html">Custom Orders</a> </li>
+          <li><a href="file:///Users/Austin/Desktop/67-250/project/contact.html">Visit or Contact Us</a> </li>
+          <!-- This anchor takes us to another page within the site; hence it is called a relative link. -->  
+      </nav>
+
+    </div> <!-- close top_row-->
+
+    <div id="content">
+      <form onsubmit="return validatePickup()">
+
+        <h2>Custom Pie Order Form</h2><br>
+        <label for="uname">First and Last Name:</label>*
+        <input type="text" id="uname" name="uname" value="" size="20" maxlength="250" placeholder="John Doe" required=""><br>
+        <label for="txtBillingAddress">Billing Address:</label>*
+        <input type="billingAddress" id="txtBillingAddress" name="txtBillingAddress" value="" size="20" maxlength="250" placeholder="5222 Butler St Pittsburgh, PA 15201" required=""><br>
+        <label for="email">Email Address:</label>*
+        <input type="email" id="email" name="email" value="" placeholder="cake@gmail.com" required=""><br>
+        <label for="phone">Phone Number:</label>* (no dashes or space, 10 digits)
+        <input type="text" id="phone" placeholder="4127810218" required=""><br>
+        <label for="pieQuantity">Pie Quantity:</label> 
+        <select name="pieQuantity">
+          <option value="1" selected="">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select><br>
+        <label for="pieType">Pie Type:</label>
+        <select name="pieType">
+          <option value="Apple" selected="">Apple</option>
+          <option value="Banana Cream">Banana Cream</option>
+          <option value="Butternut Squash">Butternut Squash</option>
+          <option value="Butterscotch">Butterscotch</option>
+          <option value="Chocolate Cream">Chocolate Cream</option>
+          <option value="Coconut Cream">Coconut Cream</option>
+          <option value="Mango">Mango</option>
+          <option value="Pecan">Pecan</option>
+          <option value="Pumpkin">Pumpkin</option>
+          <option value="Sweet Potato">Sweet Potato</option>
+          <option value="Vanilla Custard">Vanilla Custard</option>
+        </select><br>
+        <label for="txtDate">Pickup Date and Time:</label>*
+        <input type="datetime-local" id="txtDate" name="txtDate" value="" size="20" maxlength="250" required=""><br>
+        <label fr="specialInstructions">Special Instructions:</label>
+        <textarea id="specialInstructions" name="specialInstructions" value="" rows="10" cols="50" maxlength="1000"> </textarea><br>
+      
+        <input type="submit" name="btnimage" value="Submit">
+      
+      </form>
+    </div> <!-- close content-->
+
+    <footer>
+
+      <div class="row1">
+
+      <div class="columnfootone">
+        <h3>Contact</h3> 
+        Phone: 412-781-0218 <br>
+        <p>Email: <a href="mailto:info@thebutterwood.com">info@thebutterwood.com</a></p>
+      </div>
+
+      <div class="columnfoottwo">
+        <h3>Follow Us!</h3> 
+        <a href="https://www.facebook.com/thebutterwoodbakeconsortium?ref=hl" target="_blank"><img src="file:///Users/Austin/Desktop/67-250/project/images/facebook.webp"></a>
+        <a href="https://www.instagram.com/thebutterwoodbakeconsortium/" target="_blank"><img src="file:///Users/Austin/Desktop/67-250/project/images/instagram.webp"></a>
+      </div>
+
+      <div class="columnfootthree">
+        <h3>Address</h3> 
+        <a href="https://www.google.com/maps/place/5222+Butler+St,+Pittsburgh,+PA+15201/data=!4m2!3m1!1s0x8834f2f8094aa81b:0x8460b792bcc058aa?sa=X&amp;ved=2ahUKEwjxoOa5ipzhAhWthOAKHckzC4cQ8gEwAHoECAoQAQ" target="_blank">5222 Butler St Pittsburgh, PA 15201</a>
+      </div>
+
+      <div class="columnfootfour">
+        <h3>Hours</h3> 
+        Wed–Fri 12PM - 11PM <br> Sat 10AM - 11PM <br> Sun 10AM - 9PM
+      </div> <!-- close column -->
+
+      </div> <!-- close row -->
+
+    </footer>
+
+  </div>   <!-- close container-->
+
+
+</body></html>
