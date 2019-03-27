@@ -11,14 +11,10 @@
 
   <!-- The title will appear in the menu bar of the browser -->
   
-  <link rel="stylesheet" media="all" type="text/css" href="css/styles.css" />
-  <link rel="stylesheet" media="all" type="text/css" href="css/jquery-ui.css" />
-  <link rel="stylesheet" media="all" type="text/css" href="css/jquery.lightbox.css" />
+  <link rel="stylesheet" media="all" type="text/css" href="css/styles.css">
   <link rel="stylesheet" media="all" type="text/css" href="css/tabs.css">
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"> </script>
   <script type="text/javascript" src="js/scripts.js" > </script>
-  <script type="text/javascript" src="js/jquery-ui.js" > </script>
-  <script type="text/javascript" src="js/jquery.lightbox.min.js" > </script>
 
   <script>
     function openCity(evt, cityName) {
@@ -66,26 +62,90 @@
   .columnmiddleS {
     width: 82%;
     float: right;
-    margin-right: 2%;
+    margin-right: 3%;
     margin-left: 2%;
     margin-bottom: 20px;
   }
 
   h2, h4 {
-    font-family: "PT Sans";
+    font-family: "PT Sans", sans-serif;
     color: #580c3b;
   }
 
   #content h3 {
-    font-family: "PT Sans";
+    font-family: "PT Sans", sans-serif;
   }
 
   #accord1, #accord2, #accord3, #accord4, 
-  #accord5, #accord6, #accord7, #accord8, #accord9 {
+  #accord5, #accord6, #accord7, #accord8 {
     padding: 10px;
+    background-color: #eaf0ff;
+  }
+  
+  footer {
+    clear: both; /* The clear property specifies which side(s) of an element other floating elements are not allowed. */
+    padding: 0.5em;
+    color: #333333;
+    font-variant: small-caps; 
+    font-size: .813em;
+    text-align: center;
+    border-top: 1px dotted #cccccc;
+    column-count: 4;
+    color: #0c5829;
+    font-family: "PT Sans", sans-serif;
+  }
+
+  h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+  }
+
+  #nav2 {
+    text-align: center;
+  }
+
+  #nav2 a {
+    text-decoration: none;
+    font-size: 1.125em;
+    font-weight: 400;
+    width: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: #580c3b;
+  }
+
+  #nav2 a.selected {
+    color: #f1bb99; 
+  }
+  
+  #nav2 a.selected:hover {
+    color: #f1bb99; 
+  }
+
+  #nav2 a:hover {  
+    color: #f1bb99;
+  }
+
+  body {
+    font-family: "PT Sans";
+    font-size: 100%;
+    line-height: 27.2px;
+    font-size: 16px;
+    color: #000000;
+    background: #fff9ea;
+    text-size-adjust: auto;
+    height: 25px;
+    margin-top: 19px;
   }
 
   </style>
+
+  <title>Special Occasions</title>
   
 </head>
 
@@ -99,13 +159,13 @@
         <img src="images/logo.png" alt="Butterwood Logo">
       </header>
       
-      <nav> <!-- Nav is new tag in HTML 5 -->
-          <li><a class="selected" href="index.html">Home</a> </li> <!-- Navigation to other pages in our website - these are relative links --> 
-          <li><a href="special.html">Special Occasions</a> </li>
+      <div id="nav2"> <!-- Nav is new tag in HTML 5 -->
+          <li><a href="index.html">Home</a> </li> <!-- Navigation to other pages in our website - these are relative links --> 
+          <li><a class="selected" href="special.html">Special Occasions</a> </li>
           <li><a href="custom.html">Custom Orders</a> </li>
           <li><a href="contact.html">Visit or Contact Us</a> </li>
           <!-- This anchor takes us to another page within the site; hence it is called a relative link. -->  
-      </nav>
+      </div>
 
     </div> <!-- close top_row-->
 
@@ -153,9 +213,8 @@
 
               <button onclick="myFunction('accord1')" class="w3-btn w3-block w3-purple w3-left-align">Steph and Steve's Wedding</button>
               <div id="accord1" class="w3-container w3-hide">
-                <p>Steves enjoyed his wedding!</p> 
+                <p>Steve loved the flowery gold leaf cake.</p> 
                 <p>Steph did too!</p>
-                <p>Steve loves Steph and he's so happy they're finally married!</p>
               </div>
 
               <button onclick="myFunction('accord2')" class="w3-btn w3-block w3-purple w3-left-align">Sophia and Leo's Wedding</button>
@@ -167,7 +226,7 @@
 
               <button onclick="myFunction('accord3')" class="w3-btn w3-block w3-purple w3-left-align">Tim and Sonal's Wedding</button>
               <div id="accord3" class="w3-container w3-hide">
-                <p>Tim: "We got a Paul Pogba cupcake and I loved it."</p>
+                <p>Tim: ""We got a batch of 50 cupcakes for our guests and they loved it."</p>
               </div> 
 
             </div><!-- end accordionWedding -->
@@ -191,23 +250,29 @@
 
             <div class="accordionCelebrations">
 
-              <button onclick="myFunction('accord4')" class="w3-btn w3-block w3-purple w3-left-align">Steph and Steve's Wedding</button>
+              <button onclick="myFunction('accord4')" class="w3-btn w3-block w3-purple w3-left-align">Alvin's Graduation</button>
               <div id="accord4" class="w3-container w3-hide">
-                <p>Steves enjoyed his wedding!</p> 
-                <p>Steph did too!</p>
-                <p>Steve loves Steph and he's so happy they're finally married!</p>
+                <p>Alvin: The staff was super friendly.</p>
+                <ul>
+                  <li>They were willing to change my order at the last minute</li>
+                  <li>They maintained close communcation on status throughout the process</li>
+                  <li>They treat their customers like family</li>
+                </ul>
               </div>
 
-              <button onclick="myFunction('accord5')" class="w3-btn w3-block w3-purple w3-left-align">Sophia and Leo's Wedding</button>
+              <button onclick="myFunction('accord5')" class="w3-btn w3-block w3-purple w3-left-align">Andey's Baby Shower</button>
               <div id="accord5" class="w3-container w3-hide">
-                <p>Sophia and Leo ordered a five-tiered Toronto themed cheesecake.</p> 
-                <p>Sophia: "It tasted like heaven..."</p>
-                <p>Leo: "It was so fluffy!!!"</p>
+                <p>Andey got a lemon curd and thought it was so good she ordered three more. She recommends it to anyone.</p> 
               </div>
 
-              <button onclick="myFunction('accord6')" class="w3-btn w3-block w3-purple w3-left-align">Tim and Sonal's Wedding</button>
+              <button onclick="myFunction('accord6')" class="w3-btn w3-block w3-purple w3-left-align">Austin's Birthday</button>
               <div id="accord6" class="w3-container w3-hide">
-                <p>Tim: "We got a Paul Pogba cupcake and I loved it."</p>
+                <p>Austin: I love everything here! My favorites are:</p>
+                <ol>
+                  <li>Persian Love Cake</li>
+                  <li>Pumpkin Pie</li>
+                  <li>Chocolate Sweet Cake</li>
+                </ol>
               </div> 
 
             </div><!-- end accordionCelebrations -->
@@ -226,24 +291,20 @@
 
             <div class="accordionHolidays">
 
-              <button onclick="myFunction('accord7')" class="w3-btn w3-block w3-purple w3-left-align">Steph and Steve's Wedding</button>
+              <button onclick="myFunction('accord7')" class="w3-btn w3-block w3-purple w3-left-align">Jason's Valentine's Day</button>
               <div id="accord7" class="w3-container w3-hide">
-                <p>Steves enjoyed his wedding!</p> 
-                <p>Steph did too!</p>
-                <p>Steve loves Steph and he's so happy they're finally married!</p>
+                <p>For Valentine's Day, Jason bought himself: </p> 
+                <ul>  
+                  <li>A pink frosted cupcake</li>
+                  <li>A rose flower cake</li>
+                  <li>Rose flavored hot chocolate</li>
+                </ul>
               </div>
 
-              <button onclick="myFunction('accord8')" class="w3-btn w3-block w3-purple w3-left-align">Sophia and Leo's Wedding</button>
+              <button onclick="myFunction('accord8')" class="w3-btn w3-block w3-purple w3-left-align">David's Bar Mitzvah</button>
               <div id="accord8" class="w3-container w3-hide">
-                <p>Sophia and Leo ordered a five-tiered Toronto themed cheesecake.</p> 
-                <p>Sophia: "It tasted like heaven..."</p>
-                <p>Leo: "It was so fluffy!!!"</p>
+                <p>David: "My themed cake came out great."</p> 
               </div>
-
-              <button onclick="myFunction('accord9')" class="w3-btn w3-block w3-purple w3-left-align">Tim and Sonal's Wedding</button>
-              <div id="accord9" class="w3-container w3-hide">
-                <p>Tim: "We got a Paul Pogba cupcake and I loved it."</p>
-              </div> 
 
             </div><!-- end accordionHolidays -->
 
@@ -260,7 +321,7 @@
     <footer>
 
       <div class="columnfootone">
-        <h3 font-family="PT Sans">Contact</h3> 
+        <h3>Contact</h3> 
         Phone: 412-781-0218 <br>
         Email: <a href="mailto:info@thebutterwood.com">info@thebutterwood.com</a>
       </div>

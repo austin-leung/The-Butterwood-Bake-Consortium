@@ -90,7 +90,6 @@
 
   <style>
     .storeinfo {
-      height: auto;
       border: 3px solid #f1bb99;
       border-radius: 1%;
       width: 82%;
@@ -101,20 +100,17 @@
     }
 
     .storeinfoRow1 {
-      height: 100%;
+      height: 50%;
     }
 
-    .storeinfoRow2 {
-      height: 45%;
-      width: auto;
-    }
 
     .storeinfotable {
-      width: 45%;
+      width: 43%;
       height: auto;
       float: left;
       margin-left: 3%;
-      margin-right: 4%;
+      margin-right: 2%;
+      margin-bottom: 2%;
     }
 
     .storeinfotable table {
@@ -122,8 +118,22 @@
     }
 
     .storeinfotable img {
-      width: 190px;
+      width: 39%;
       height: auto;
+    }
+
+    form {
+      width: 43%;
+      float: right;
+      height: auto;
+      border-style: solid;
+      border-width: 3px;
+      border-color: #580c3b;
+      border-radius: 1%;
+      padding: 10px;  
+      margin-right: 3%;
+      margin-left: 2%;
+      margin-bottom: 2%;
     }
 
     #container-graph1 {
@@ -131,24 +141,21 @@
       float: left;
       margin-left: 3%;
       margin-right: 4%;
+      margin-top: 2%;
+      margin-bottom: 2%;
     }
 
     #container-graph2 {
       width: 45%;
       float: left;
       margin-right: 3%;
-    }
-
-    .storeinforight{
-      width: 45%;
-      height: 100%;
-      float: left;
-      margin-right: 3%;
+      margin-top: 2%;
+      margin-bottom: 2%;
     }
 
     iframe {
       width: 100%;
-      height: 400px;
+      height: auto;
     }
 
     input[type=text], input[type=zipcode], input[type=email] {
@@ -192,13 +199,17 @@
     h2 {
       font-family: "PT Sans";
       color: #580c3b;
+      font-weight: 400;
     }
 
     h3 {
       font-family: "PT Sans";
     }
 
+
   </style>
+
+  <title>Visit Butterwood</title>
   
 </head>
 
@@ -232,10 +243,11 @@
 
           <div class="storeinfotable">
             <table border="4">
-              <th colspan=2><img src="images/store.jpg" alt="store"></th>
+              <th colspan=2><a href="https://www.google.com/maps/place/5222+Butler+St,+Pittsburgh,+PA+15201/data=!4m2!3m1!1s0x8834f2f8094aa81b:0x8460b792bcc058aa?sa=X&ved=2ahUKEwjxoOa5ipzhAhWthOAKHckzC4cQ8gEwAHoECAoQAQ" target="_blank"><img src="images/store.jpg" alt="store"></a></th>
                 <tr>
                   <td>Address</td>
-                  <td>Lawrenceville 5222 Butler St Pittsburgh, PA 15201</td> 
+                  <td>Lawrenceville 5222 Butler St Pittsburgh, PA 15201<br>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3034.74491333852!2d-79.95592604909345!3d40.48090797925633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f2f80929711b%3A0x169402af50d86e6c!2sThe+Butterwood+Bake+Consortium!5e0!3m2!1sen!2sus!4v1553563306877" frameborder="0" style="border:0" allowfullscreen></iframe></td> 
                 </tr>
                 <tr>
                   <td>Phone</td>
@@ -243,7 +255,11 @@
                 </tr>
                 <tr>
                   <td>Email</td>
-                  <td>info@thebutterwood.com</td> 
+                  <td><a href="mailto:info@thebutterwood.com">info@thebutterwood.com</a></td> 
+                </tr>
+                <tr>
+                  <td>Website</td>
+                  <td><a href="https://www.thebutterwoodbakeconsortium.com/" target="_blank">https://www.thebutterwoodbakeconsortium.com/</a></td> 
                 </tr>
                 <tr>
                   <td>Hours</td>
@@ -252,36 +268,31 @@
             </table>
           </div> <!-- close storeinfotable -->
 
-          <div class="storeinforight">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3034.74491333852!2d-79.95592604909345!3d40.48090797925633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f2f80929711b%3A0x169402af50d86e6c!2sThe+Butterwood+Bake+Consortium!5e0!3m2!1sen!2sus!4v1553563306877" frameborder="0" style="border:0" allowfullscreen></iframe>
-          </div> <!--close storeinforight-->
 
+          <form action="mailto:infoneeded@butterwoodBC.com." target="_blank" onsubmit="return validate()">
+            <h2>Contact Us!</h2><br>
+            <label for="uname">Name:</label>*<br>
+            <input type="text" id="uname" name="uname" value="" size="20" maxlength ="250" Placeholder="John Doe"required><br>
+            <label for="txtZipcode">Zip Code:</label><br>
+            <input type="zipcode" id="txtZipcode" name="txtZipcode" value="" size="20" maxlength="5" Placeholder="67250"><br>
+            <label for="email">Email Address:</label>*<br>
+            <input type="email" id="email" name="email" value="" Placeholder="cake@gmail.com" required><br>
+            <input type="checkbox" id="signup" name="signup" value="yes"> Yes, I would like to subscribe to Butterwood Bake Consortium's mailing list!<br>
+            <label fr="message">Message:</label>* <br/>
+            <textarea required id="message" name="message" value="Type your Message" rows="10" cols="50" maxlength="1000"></textarea><br/>
+
+            <input type="submit" name= "btnimage" value ="Submit">
+          
+          </form>
         </div><!--close storeinfoRow1-->
 
-        <div class="storeinfoRow2">
+        <div id="hrLine"> <hr> </div>
 
-          <div id="container-graph1"></div>
-          <div id="container-graph2"></div>
+        <div id="container-graph1"></div>
+        <div id="container-graph2"></div>
 
-        </div> <!-- close storeinfoRow2 -->
 
       </div> <!-- close storeinfo -->
-
-      <form onsubmit="return validate()">
-        <h2>Contact Us!</h2><br>
-        <label for="uname">Name:</label>*<br>
-        <input type="text" id="uname" name="uname" value="" size="20" maxlength ="250" Placeholder="John Doe"required><br>
-        <label for="txtZipcode">Zip Code:</label><br>
-        <input type="zipcode" id="txtZipcode" name="txtZipcode" value="" size="20" maxlength="5" Placeholder="67250"><br>
-        <label for="email">Email Address:</label>*<br>
-        <input type="email" id="email" name="email" value="" Placeholder="cake@gmail.com" required><br>
-        <input type="checkbox" id="signup" name="signup" value="yes"> Yes, I would like to subscribe to Butterwood Bake Consortium's mailing list!<br>
-        <label fr="message">Message:</label>* <br/>
-        <textarea required id="message" name="message" value="Type your Message" rows="10" cols="50" maxlength="1000"></textarea><br/>
-
-        <input type="submit" name= "btnimage" value ="Submit">
-      
-      </form>
       
     </div> <!-- close content-->
 
