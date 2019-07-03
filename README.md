@@ -1,5 +1,5 @@
 # The Butterwood Bake Consortium
-A simple website for a bakery made without CSS frameworks.
+A simple website for a bakery made from scratch.
 
 ![alt text](https://github.com/austin-leung/The-Butterwood-Bake-Consortium/blob/master/images/home.png)
 
